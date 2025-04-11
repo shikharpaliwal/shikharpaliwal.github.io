@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta name="description" content="NadChat monitors your crypto wallet on Monad blockchain with real-time security alerts, activity tracking, and custom notifications in a chat-style interface.">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
+      
+      <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+      
+      <title>NadChat | Your Wallet's Watchdog on Monad Blockchain</title>
+      
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  DEFAULT: '#8A2BE2',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8', 
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303'
+                },
+                secondary: {
+                  DEFAULT: '#4B0082',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3', 
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303'
+                }
+              },
+              fontFamily: {
+                sans: ['Sora', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['DM Sans', 'Inter', 'system-ui', 'sans-serif'],
+                body: ['DM Sans', 'Inter', 'system-ui', 'sans-serif']
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem'
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem'
+              }
+            }
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled']
+            }
+          }
+        };
+      });
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <style>
+        :root {
+          color-scheme: light;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          font-family: Sora, Inter, system-ui, sans-serif;
+        }
+        body {
+          font-family: DM Sans, Inter, system-ui, sans-serif;
+        }
+      </style>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative h-full">
+        <div id="RolloutPageContent"><element id="70bf1605-49ce-4d56-9dde-390b6e62ab77" data-section-id="70bf1605-49ce-4d56-9dde-390b6e62ab77">
+
+
+                
+                
+                
+<div id="root">
+  <header id="header" class="bg-neutral-900 text-white relative">
+    <div class="container mx-auto px-4 py-3" id="el-b6555501">
+      <nav class="flex items-center justify-between relative" id="el-akhaxp9k">
+        <!-- Logo -->
+        <div class="flex items-center" id="el-3p8hz84f">
+          <a href="#" class="text-xl font-bold text-[#9370DB]" id="el-rhwlorl6">NadChat</a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex space-x-8 items-center" id="el-wa9fcwaz">
+          <a href="#features" class="hover:text-[#9370DB] transition-colors duration-300" id="el-zr5s1qdm">Features</a>
+          <a href="#how-it-works" class="hover:text-[#9370DB] transition-colors duration-300" id="el-j9nu263p">How It Works</a>
+          
+          <a href="#testimonials" class="hover:text-[#9370DB] transition-colors duration-300" id="el-qjloqevv">Testimonials</a>
+          <a href="#faq" class="hover:text-[#9370DB] transition-colors duration-300" id="el-tkv2wrgu">FAQ</a>
+          
+          <!-- CTA Button -->
+          <a href="#" class="bg-[#8A2BE2] hover:bg-[#9370DB] text-white py-2 px-4 rounded-md transition-colors duration-300" id="el-uyretg54">
+            Start Tracking
+          </a>
+        </div>
+
+        <!-- Mobile Navigation Toggle -->
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-white hover:bg-neutral-800 transition-colors" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-4x2pvd31">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" id="el-dlrvnqy9"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-neutral-900 mt-2 py-4 px-4 rounded-md shadow-lg z-50">
+          <div class="flex flex-col space-y-4" id="el-ozlm2k5v">
+            <a href="#features" class="hover:text-[#9370DB] transition-colors duration-300" id="el-n4phgluc">Features</a>
+            <a href="#how-it-works" class="hover:text-[#9370DB] transition-colors duration-300" id="el-z41s2xx7">How It Works</a>
+            <a href="#faq" class="hover:text-[#9370DB] transition-colors duration-300" id="el-qsknag37">FAQ</a>
+            <a href="#testimonials" class="hover:text-[#9370DB] transition-colors duration-300" id="el-46988cg7">Testimonials</a>
+            
+            <div class="flex items-center justify-between pt-2 border-t border-neutral-800" id="el-ee78mg3u">
+              <a href="#" class="bg-[#8A2BE2] hover:bg-[#9370DB] text-white py-2 px-4 rounded-md transition-colors duration-300 w-full text-center" id="el-6rxnqyc9">
+                Get Started
+              </a>
+              
+              <button id="mobile-theme-toggle" class="ml-2 p-2 rounded-full hover:bg-neutral-800 transition-colors" aria-label="Toggle theme">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-qikvbijq">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" id="el-ctl6ooab"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <script>
+      // Mobile menu toggle functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+          const isMenuOpen = mobileMenu.classList.contains('hidden');
+          
+          if (isMenuOpen) {
+            mobileMenu.classList.remove('hidden');
+          } else {
+            mobileMenu.classList.add('hidden');
+          }
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          const isClickInsideMenu = mobileMenu.contains(event.target);
+          const isClickOnButton = mobileMenuButton.contains(event.target);
+          
+          if (!isClickInsideMenu && !isClickOnButton && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+          }
+        });
+        
+        // Close menu when pressing ESC
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+          }
+        });
+      });
+    </script>
+  </header>
+</div>
+
+              
+              
+              
+</element><element id="7bb78dff-9fdb-4374-af99-d6585d1b73e2" data-section-id="7bb78dff-9fdb-4374-af99-d6585d1b73e2">
+
+
+                
+                
+                
+                
+                
+<div id="root">
+  <section id="hero" class="relative bg-neutral-900 text-white overflow-hidden">
+    <!-- Hero Content Container -->
+    <div class="container mx-auto px-4 py-20 md:py-32 relative z-10" id="el-ldof6j94">
+      <div class="flex flex-col md:flex-row" id="el-xyksa18m">
+        <!-- Text Content -->
+        <div class="w-full md:w-1/2 mb-12 md:mb-0 md:pr-8" id="el-unl93536">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight" id="el-cs98gjex">
+            Your Wallet's Watchdog. <span class="text-[#9370DB]" id="el-ha5904jb">In Chat Form.</span>
+          </h1>
+          
+          <p class="text-xl mb-8 text-gray-300" id="el-sy81msyg">
+            Track every move. Get real-time alerts. Stay safe on Monad.
+          </p>
+          
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4" id="el-x92yhahp">
+            <a href="https://t.me/nadchat_bot" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#8A2BE2] hover:bg-[#9370DB] text-white py-3 px-6 rounded-lg transition-all duration-300 text-lg font-medium" id="el-klpxqf2g">
+              <span id="el-rxzm86f6">Start Tracking My Wallet</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor" id="el-4uea7o72">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" id="el-bfavcqph"></path>
+              </svg>
+            </a>
+            
+            
+          </div>
+          
+          <!-- Trust Badges -->
+          <div class="mt-10 flex flex-wrap items-center gap-6" id="el-thc8svyv">
+            <div class="text-sm text-gray-400" id="el-ayl0izve">Trusted by Monad users</div>
+            <div class="flex gap-4" id="el-3gqnfuo4">
+              <div class="flex items-center" id="el-80hxlaqa">
+                <div class="h-2 w-2 rounded-full bg-green-400 mr-2" id="el-h93ykcgo"></div>
+                <span class="text-sm" id="el-bv4y6cec">5000+ Wallets Protected</span>
+              </div>
+              <div class="flex items-center" id="el-j4bauyqe">
+                <div class="h-2 w-2 rounded-full bg-green-400 mr-2" id="el-fo708vxo"></div>
+                <span class="text-sm" id="el-1tome27j">99.9% Uptime</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- UI Mockup/Image -->
+        <div class="w-full md:w-1/2 relative" id="el-yx5nxzwl">
+          <div class="bg-neutral-800 p-4 rounded-xl border border-neutral-700 shadow-lg mx-auto max-w-md" id="el-7v08fiva">
+  <!-- Chat UI Mockup -->
+  <div class="flex items-center justify-between mb-4 border-b border-neutral-700 pb-3" id="el-qnzhq775">
+    <div class="flex items-center" id="el-p691jd12">
+      <div class="h-10 w-10 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white font-bold text-center" id="el-sjvk13wm">
+        NC
+      </div>
+      <div class="ml-3" id="el-ko4hahnv">
+        <div class="font-medium" id="el-t644p7g6">NadChat</div>
+        <div class="text-xs text-green-400" id="el-cryyyitz">Online | Monitoring</div>
+      </div>
+    </div>
+    <div class="text-neutral-400" id="el-wvsohicw">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" id="el-18y48xn3">
+        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" id="el-n4vbomxs"></path>
+      </svg>
+    </div>
+  </div>
+  
+  <!-- Chat Messages -->
+  <div class="space-y-4 mb-4" id="el-li3mysn5">
+    
+    <!-- System Alert -->
+    <div class="flex justify-center" id="el-i4nu8hxa">
+      <div class="bg-neutral-800 text-neutral-400 text-xs py-1 px-3 rounded-full border border-neutral-700 text-center" id="el-hl1b9mhn">
+        Today, 2:45 PM
+      </div>
+    </div>
+
+    <!-- Bot Confirmation - Contract Interaction (Moved above) -->
+    <div class="flex" id="el-wpwqazbh">
+      <div class="h-8 w-8 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white text-xs text-center" id="el-0gn42mox">
+        NC
+      </div>
+      <div class="ml-2 bg-neutral-500 bg-opacity-20 border border-neutral-500 p-3 rounded-lg rounded-tl-none max-w-xs" id="el-oy6pz4lc">
+        
+        <h4 class="font-medium text-red-400 mb-2 flex items-center" id="el-9do1ki9d"> High Risk: Unlimited Approval</h4>
+        <div class="space-y-2 text-sm text-white" id="el-cusceic0">
+          <div class="flex justify-between" id="el-ritdusjb">
+            <span id="el-doza1cla">Contract:</span>
+            <div class="address-container text-right" id="el-zvna0uhn">
+              <span class="font-mono truncated-address" id="el-zvna0uhn" title="">
+                0x2dcc...4289
+              </span>
+            </div>
+          </div>
+          <div class="flex justify-between" id="el-xb80j21q">
+            <span id="el-c1af4m2y">Function:</span>
+            <span class="font-mono text-right" id="el-uuo9s3px">approve</span>
+          </div>
+          <div class="flex justify-between" id="el-new1">
+            <span id="el-new2">Token:</span>
+            <span class="font-mono text-right" id="el-new3">USDC</span>
+          </div>
+          <div class="flex justify-between" id="el-new1">
+            <span id="el-new2">Quantity:</span>
+            <span class="font-mono text-right flex items-center justify-end" id="el-new3"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-red-600 mr-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-8jtrnc4a">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" id="el-9kju8d9r"></path>
+            </svg>Unlimited</span>
+          </div>
+          <div class="flex justify-between" id="el-flbdehoe">
+            <span id="el-jay4hu90">Status:</span>
+            <span class="font-medium text-right" id="el-hg104lm4">Success</span>
+          </div>
+          <div class="mt-3 pt-2 border-t border-neutral-400" id="el-rk2p5nyh">
+            <div class="flex justify-between" id="el-k3lu3ph1">
+              <span class="text-xs text-white">Hash: 0xb7a5...e258</span>
+              <span class="text-xs text-white text-right">Verify details <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block ml-1 h-4 w-4 text-white">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2 2.75651C2 2.38832 2.29848 2.08984 2.66667 2.08984H6C6.36819 2.08984 6.66667 2.38832 6.66667 2.75651C6.66667 3.1247 6.36819 3.42318 6 3.42318H3.33333V12.7565H12.6667V10.0898C12.6667 9.72165 12.9651 9.42318 13.3333 9.42318C13.7015 9.42318 14 9.72165 14 10.0898V13.4232C14 13.7914 13.7015 14.0898 13.3333 14.0898H2.66667C2.29848 14.0898 2 13.7914 2 13.4232V2.75651ZM9.33333 3.42318C8.96514 3.42318 8.66667 3.1247 8.66667 2.75651C8.66667 2.38832 8.96514 2.08984 9.33333 2.08984H13.3333C13.7015 2.08984 14 2.38832 14 2.75651V6.75651C14 7.1247 13.7015 7.42318 13.3333 7.42318C12.9651 7.42318 12.6667 7.1247 12.6667 6.75651V4.36599L7.80474 9.22792C7.54439 9.48827 7.12228 9.48827 6.86193 9.22792C6.60158 8.96757 6.60158 8.54546 6.86193 8.28511L11.7239 3.42318H9.33333Z" fill="currentColor"></path>
+              </svg></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex" id="el-8hdtjfdw">
+      <div class="flex" id="el-wpwqazbh">
+        <div class="h-8 w-8 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white text-xs text-center" id="el-0gn42mox">
+          NC
+        </div>
+        <div class="ml-2 bg-neutral-500 bg-opacity-20 border border-neutral-500 p-3 rounded-lg rounded-tl-none max-w-xs" id="el-oy6pz4lc" style="width:274.461px;">
+          <h4 class="font-medium text-purple-400 mb-2" id="el-9do1ki9d">MON Staking</h4>
+          <div class="space-y-2 text-sm text-white" id="el-cusceic0">
+            <div class="flex justify-between" id="el-new1">
+              <span id="el-new2">Contract</span>
+              <span class="font-mono text-right" id="el-new3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-1 text-green-500" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="0.5">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg> aprMON</span>
+            </div>
+            <div class="flex justify-between" id="el-new1">
+              <span id="el-new2">Function</span>
+              <span class="font-mono text-right" id="el-new3">desposit</span>
+            </div>
+            <div class="flex justify-between" id="el-new1">
+              <span id="el-new2">Token:</span>
+              <span class="font-mono text-right" id="el-new3">2.8 MON</span>
+            </div>
+            <div class="flex justify-between" id="el-flbdehoe">
+              <span id="el-jay4hu90">Status:</span>
+              <span class="font-medium text-right" id="el-hg104lm4">Success</span>
+            </div>
+            <div class="mt-3 pt-2 border-t border-neutral-400" id="el-rk2p5nyh">
+              <div class="flex justify-between" id="el-k3lu3ph1">
+                <span class="text-xs text-white">Hash: 0xcb5e...7e14</span>
+                <span class="text-xs text-white text-right">View details <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block ml-1 h-4 w-4 text-white">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M2 2.75651C2 2.38832 2.29848 2.08984 2.66667 2.08984H6C6.36819 2.08984 6.66667 2.38832 6.66667 2.75651C6.66667 3.1247 6.36819 3.42318 6 3.42318H3.33333V12.7565H12.6667V10.0898C12.6667 9.72165 12.9651 9.42318 13.3333 9.42318C13.7015 9.42318 14 9.72165 14 10.0898V13.4232C14 13.7914 13.7015 14.0898 13.3333 14.0898H2.66667C2.29848 14.0898 2 13.7914 2 13.4232V2.75651ZM9.33333 3.42318C8.96514 3.42318 8.66667 3.1247 8.66667 2.75651C8.66667 2.38832 8.96514 2.08984 9.33333 2.08984H13.3333C13.7015 2.08984 14 2.38832 14 2.75651V6.75651C14 7.1247 13.7015 7.42318 13.3333 7.42318C12.9651 7.42318 12.6667 7.1247 12.6667 6.75651V4.36599L7.80474 9.22792C7.54439 9.48827 7.12228 9.48827 6.86193 9.22792C6.60158 8.96757 6.60158 8.54546 6.86193 8.28511L11.7239 3.42318H9.33333Z" fill="currentColor"></path>
+                </svg></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Bot Confirmation - Contract Interaction (Moved above) -->
+    <div class="flex" id="el-wpwqazbh">
+      <div class="h-8 w-8 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white text-xs text-center" id="el-0gn42mox">
+        NC
+      </div>
+      <div class="ml-2 bg-neutral-500 bg-opacity-20 border border-neutral-500 p-3 rounded-lg rounded-tl-none max-w-xs" id="el-oy6pz4lc">
+        <h4 class="font-medium text-purple-400 mb-2" id="el-9do1ki9d">NFT Minting</h4>
+        <h4 class="font-medium text-yellow-400 mb-2" id="el-9do1ki9d">Medium Risk: Unverified Contract</h4>
+        <div class="space-y-2 text-sm text-white" id="el-cusceic0">
+          <div class="flex justify-between" id="el-ritdusjb">
+            <span id="el-doza1cla">Contract:</span>
+            <div class="address-container text-right" id="el-zvna0uhn">
+              <span class="font-mono truncated-address" id="el-zvna0uhn" title="0x495f947276749Ce646f68AC8c248420045cb7b5e">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-400 ml-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                </svg> 0x495f...cb7b5e 
+              </span>
+            </div>
+          </div>
+          <div class="flex justify-between" id="el-xb80j21q">
+            <span id="el-c1af4m2y">Function:</span>
+            <span class="font-mono text-right" id="el-uuo9s3px">mint</span>
+          </div>
+          <div class="flex justify-between" id="el-new1">
+            <span id="el-new2">NFT:</span>
+            <span class="font-mono text-right" id="el-new3">MonadPunks #1337</span>
+          </div>
+          <div class="flex justify-between" id="el-flbdehoe">
+            <span id="el-jay4hu90">Status:</span>
+            <span class="font-medium text-right" id="el-hg104lm4">Success</span>
+          </div>
+          <div class="mt-3 pt-2 border-t border-neutral-400" id="el-rk2p5nyh">
+            <div class="flex justify-between" id="el-k3lu3ph1">
+              <span class="text-xs text-white">Hash: 0x19a5...df53</span>
+              <span class="text-xs text-white text-right">Verify details <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block ml-1 h-4 w-4 text-white">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2 2.75651C2 2.38832 2.29848 2.08984 2.66667 2.08984H6C6.36819 2.08984 6.66667 2.38832 6.66667 2.75651C6.66667 3.1247 6.36819 3.42318 6 3.42318H3.33333V12.7565H12.6667V10.0898C12.6667 9.72165 12.9651 9.42318 13.3333 9.42318C13.7015 9.42318 14 9.72165 14 10.0898V13.4232C14 13.7914 13.7015 14.0898 13.3333 14.0898H2.66667C2.29848 14.0898 2 13.7914 2 13.4232V2.75651ZM9.33333 3.42318C8.96514 3.42318 8.66667 3.1247 8.66667 2.75651C8.66667 2.38832 8.96514 2.08984 9.33333 2.08984H13.3333C13.7015 2.08984 14 2.38832 14 2.75651V6.75651C14 7.1247 13.7015 7.42318 13.3333 7.42318C12.9651 7.42318 12.6667 7.1247 12.6667 6.75651V4.36599L7.80474 9.22792C7.54439 9.48827 7.12228 9.48827 6.86193 9.22792C6.60158 8.96757 6.60158 8.54546 6.86193 8.28511L11.7239 3.42318H9.33333Z" fill="currentColor"></path>
+              </svg></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+  
+  <!-- Chat Input -->
+  <div class="flex items-center bg-neutral-700 rounded-lg p-2" id="el-xa1j1rcf">
+    <input type="text" placeholder="Ask me anything about your wallet..." class="bg-transparent border-0 outline-none flex-grow text-sm p-1 text-white text-left" id="el-bu7pn0py">
+    <button class="ml-2 bg-[#8A2BE2] h-8 w-8 rounded-full flex items-center justify-center" id="el-lau3jkdq">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" id="el-2sucd8sd">
+        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" id="el-qhom9rju"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+          
+          <!-- Animation elements -->
+          <div class="absolute -top-10 -right-10 h-20 w-20 bg-[#8A2BE2] opacity-10 rounded-full blur-xl" id="el-pgsg4aaf"></div>
+          <div class="absolute -bottom-5 -left-5 h-16 w-16 bg-[#9370DB] opacity-10 rounded-full blur-xl" id="el-nqh0bzks"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Background Elements -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-5" id="el-m78b5pcm">
+      <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-[#8A2BE2] rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" id="el-zelu38ur"></div>
+      <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-[#9370DB] rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" id="el-giwq0ds1"></div>
+    </div>
+    
+    <!-- Floating Icons/Elements -->
+  </section>
+</div>
+                
+                
+                
+<div id="root">
+  <section id="features" class="bg-neutral-900 py-24 relative overflow-hidden">
+    <!-- Background elements -->
+    <div class="absolute inset-0 opacity-5" id="el-vhofkoax">
+      <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-[#8A2BE2] rounded-full blur-3xl" id="el-e2avuocc"></div>
+      <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#9370DB] rounded-full blur-3xl" id="el-uryx86jw"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10" id="el-am4vrqfm">
+      <!-- Section header -->
+      <div class="text-center mb-16" id="el-6ucmmgdv">
+        <h2 class="text-4xl font-bold text-white mb-4" id="el-rhqe2c5u">Features</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto" id="el-7bnqyd1g">Powerful security tools wrapped in a simple chat interface. Your wallet's best friend on the Monad blockchain.</p>
+      </div>
+      
+      <!-- Features Tabs -->
+      <div class="max-w-6xl mx-auto" id="el-8nkz7gj1">
+        <!-- Tab Navigation -->
+        <div class="flex flex-wrap justify-center mb-8 relative" id="el-acqu3p7a">
+          <button class="tab-btn active px-6 py-3 mx-2 mb-2 rounded-lg text-white font-medium transition-all duration-300 bg-[#8A2BE2] hover:bg-[#9370DB]" data-target="content-tracker" id="el-sf56cna5">
+            NadTracker
+          </button>
+          <button class="tab-btn px-6 py-3 mx-2 mb-2 rounded-lg text-gray-300 font-medium transition-all duration-300 bg-[#8A2BE2] hover:bg-[#9370DB]" data-target="content-watchdog" id="el-rwrqk2fq">
+            NadWatchdog
+          </button>
+          <button class="tab-btn px-6 py-3 mx-2 mb-2 rounded-lg text-gray-300 font-medium transition-all duration-300 bg-[#8A2BE2] hover:bg-[#9370DB]" data-target="content-notify" id="el-tov8rojw">
+            NadNotify
+          </button>
+        </div>
+        
+        <!-- Tab Content -->
+        <div class="tab-content-container relative" id="el-zswxj5us">
+          <!-- Tab 1: NadTracker -->
+          <div id="content-tracker" class="tab-content transition-opacity duration-300 block opacity-100">
+            <div class="grid md:grid-cols-2 gap-12 items-center" id="el-ncc52g63">
+              <div class="order-2 md:order-1" id="el-d5htiyar">
+                <div class="p-6 bg-neutral-800 rounded-xl border border-neutral-700 shadow-lg" id="el-s39efstn">
+  <!-- Chat/Timeline UI mockup -->
+  <div class="flex items-center justify-between mb-4 border-b border-neutral-700 pb-3" id="el-3f226ehg">
+    <div class="flex items-center" id="el-nixma4z8">
+      <div class="h-10 w-10 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white font-bold text-sm" id="el-ygcowzn3">
+        NC
+      </div>
+      <div class="ml-3" id="el-9rp6pgub">
+        <div class="font-medium text-white" id="el-m3qzlsiv">NadChat</div>
+        <div class="text-xs text-green-400" id="el-e81qf8nt">Online | Monitoring</div>
+      </div>
+    </div>
+    <div class="text-neutral-400" id="el-7fmp5vh1">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" id="el-yflnaf47">
+        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" id="el-3ms6jeqe"></path>
+      </svg>
+    </div>
+  </div>
+  
+  <!-- Timeline entries -->
+  <div class="space-y-3 max-h-100 pr-2" id="el-5zfx9v6z">
+    
+    <!-- Time indicator -->
+    <div class="flex justify-center" id="el-i4nu8hxa">
+      <div class="bg-neutral-800 text-neutral-400 text-xs py-1 px-3 rounded-full border border-neutral-700 text-center" id="el-hl1b9mhn">
+        Today, 11:45 AM
+      </div>
+    </div>
+    
+    <!-- Timeline item 3 -->
+    <!-- Bot Alert Message - Security Alert (Moved below) -->
+    <div class="flex" id="el-8hdtjfdw">
+      <div class="flex" id="el-wpwqazbh">
+        <div class="h-8 w-8 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white text-xs text-center" id="el-0gn42mox">
+          NC
+        </div>
+        <div class="ml-2 bg-neutral-500 bg-opacity-20 border border-neutral-500 p-3 rounded-lg rounded-tl-none max-w-xs" id="el-oy6pz4lc" style="width:274.461px;">
+          <h4 class="font-medium text-purple-400 mb-2" id="el-9do1ki9d">Token Received</h4>
+          <div class="space-y-2 text-sm text-white" id="el-cusceic0">
+            <div class="flex justify-between" id="el-new1">
+              <span id="el-new2">Token:</span>
+              <span class="font-mono text-right" id="el-new3">10.35 MON</span>
+            </div>
+            <div class="flex justify-between" id="el-ritdusjb">
+              <span id="el-doza1cla">From Address:</span>
+              <div class="address-container text-right" id="el-zvna0uhn">
+                <span class="font-mono truncated-address" id="el-zvna0uhn" title="0x495f947276749Ce646f68AC8c248420045cb7b5e">
+                  0x5a15...A6a0
+                </span>
+              </div>
+              
+            </div>
+            <div class="flex justify-between" id="el-flbdehoe">
+              <span id="el-jay4hu90">Status:</span>
+              <span class="font-medium text-right" id="el-hg104lm4">Success</span>
+            </div>
+            <div class="mt-3 pt-2 border-t border-neutral-400" id="el-rk2p5nyh">
+              <div class="flex justify-between" id="el-k3lu3ph1">
+                <span class="text-xs text-white">Hash: 0xb949...8380</span>
+                <span class="text-xs text-white text-right">View details <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block ml-1 h-4 w-4 text-white">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M2 2.75651C2 2.38832 2.29848 2.08984 2.66667 2.08984H6C6.36819 2.08984 6.66667 2.38832 6.66667 2.75651C6.66667 3.1247 6.36819 3.42318 6 3.42318H3.33333V12.7565H12.6667V10.0898C12.6667 9.72165 12.9651 9.42318 13.3333 9.42318C13.7015 9.42318 14 9.72165 14 10.0898V13.4232C14 13.7914 13.7015 14.0898 13.3333 14.0898H2.66667C2.29848 14.0898 2 13.7914 2 13.4232V2.75651ZM9.33333 3.42318C8.96514 3.42318 8.66667 3.1247 8.66667 2.75651C8.66667 2.38832 8.96514 2.08984 9.33333 2.08984H13.3333C13.7015 2.08984 14 2.38832 14 2.75651V6.75651C14 7.1247 13.7015 7.42318 13.3333 7.42318C12.9651 7.42318 12.6667 7.1247 12.6667 6.75651V4.36599L7.80474 9.22792C7.54439 9.48827 7.12228 9.48827 6.86193 9.22792C6.60158 8.96757 6.60158 8.54546 6.86193 8.28511L11.7239 3.42318H9.33333Z" fill="currentColor"></path>
+                </svg></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex" id="el-8hdtjfdw">
+      <div class="flex" id="el-wpwqazbh">
+        <div class="h-8 w-8 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white text-xs text-center" id="el-0gn42mox">
+          NC
+        </div>
+        <div class="ml-2 bg-neutral-500 bg-opacity-20 border border-neutral-500 p-3 rounded-lg rounded-tl-none max-w-xs" id="el-oy6pz4lc" style="width:274.461px;">
+          <h4 class="font-medium text-purple-400 mb-2" id="el-9do1ki9d">Token Swapped</h4>
+          <div class="space-y-2 text-sm text-white" id="el-cusceic0">
+            <div class="flex justify-between" id="el-new1">
+              <span id="el-new2">Contract</span>
+              <span class="font-mono text-right" id="el-new3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-1 text-green-500" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="0.5">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg> MonadSwap</span>
+            </div>
+            <div class="flex justify-between" id="el-new1">
+              <span id="el-new2">Token Sent:</span>
+              <span class="font-mono text-right" id="el-new3">0.5 MON</span>
+            </div>
+            <div class="flex justify-between" id="el-ritdusjb">
+              <span id="el-doza1cla">Token Received:</span>
+              <div class="address-container text-right" id="el-zvna0uhn">
+                <span class="font-mono truncated-address" id="el-zvna0uhn" title="">125 USDC</span>
+              </div>
+              
+            </div>
+            <div class="flex justify-between" id="el-flbdehoe">
+              <span id="el-jay4hu90">Status:</span>
+              <span class="font-medium text-right" id="el-hg104lm4">Success</span>
+            </div>
+            <div class="mt-3 pt-2 border-t border-neutral-400" id="el-rk2p5nyh">
+              <div class="flex justify-between" id="el-k3lu3ph1">
+                <span class="text-xs text-white">Hash: 0xaf00...e402</span>
+                <span class="text-xs text-white text-right">View details <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block ml-1 h-4 w-4 text-white">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M2 2.75651C2 2.38832 2.29848 2.08984 2.66667 2.08984H6C6.36819 2.08984 6.66667 2.38832 6.66667 2.75651C6.66667 3.1247 6.36819 3.42318 6 3.42318H3.33333V12.7565H12.6667V10.0898C12.6667 9.72165 12.9651 9.42318 13.3333 9.42318C13.7015 9.42318 14 9.72165 14 10.0898V13.4232C14 13.7914 13.7015 14.0898 13.3333 14.0898H2.66667C2.29848 14.0898 2 13.7914 2 13.4232V2.75651ZM9.33333 3.42318C8.96514 3.42318 8.66667 3.1247 8.66667 2.75651C8.66667 2.38832 8.96514 2.08984 9.33333 2.08984H13.3333C13.7015 2.08984 14 2.38832 14 2.75651V6.75651C14 7.1247 13.7015 7.42318 13.3333 7.42318C12.9651 7.42318 12.6667 7.1247 12.6667 6.75651V4.36599L7.80474 9.22792C7.54439 9.48827 7.12228 9.48827 6.86193 9.22792C6.60158 8.96757 6.60158 8.54546 6.86193 8.28511L11.7239 3.42318H9.33333Z" fill="currentColor"></path>
+                </svg></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- User Reply Options -->
+    <div class="flex justify-end" id="el-sp2n4322">
+      <div class="bg-[#9370DB] p-3 rounded-lg rounded-tr-none max-w-xs" id="el-2hhes8p3">
+        <p class="text-sm text-center text-white" id="el-cdaxrzye">What are my token balances?</p>
+      </div>
+    </div>
+
+    <!-- Bot Alert Message - Security Alert (Moved below) -->
+    <div class="flex" id="el-8hdtjfdw">
+      <div class="h-8 w-8 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white text-xs text-center" id="el-kmktevnk">
+        NC
+      </div>
+      <div class="ml-2 bg-neutral-500 bg-opacity-20 border border-neutral-500 p-3 rounded-lg rounded-tl-none max-w-xs" id="el-oy6pz4lc" style="width: 256px;">
+        <h4 class="font-medium text-purple-400 mb-2" id="el-9do1ki9d">Token Balances</h4>
+        <div class="space-y-2 text-sm text-white" id="el-cusceic0">
+          <div class="flex justify-between" id="el-new1">
+            <span class="font-mono">MON</span>
+            <span class="font-mono text-right" id="el-new3">9.85</span>
+          </div>
+          <div class="flex justify-between" id="el-new1">
+            <span class="font-mono">CHOG</span>
+            <span class="font-mono text-right" id="el-new3">31.23</span>
+          </div>
+          <div class="flex justify-between" id="el-new1">
+            <span class="font-mono">YAKI</span>
+            <span class="font-mono text-right" id="el-new3">1281.41</span>
+          </div>
+          <div class="flex justify-between" id="el-new1">
+            <span class="font-mono">USDC</span>
+            <span class="font-mono text-right" id="el-new3">125.0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bot Alert Message - Security Alert (Moved below) -->
+    <div class="flex" id="el-8hdtjfdw">
+      <div class="flex" id="el-wpwqazbh">
+        <div class="h-8 w-8 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white text-xs text-center" id="el-0gn42mox">
+          NC
+        </div>
+        <div class="ml-2 bg-neutral-500 bg-opacity-20 border border-neutral-500 p-3 rounded-lg rounded-tl-none max-w-xs" id="el-oy6pz4lc" style="width:274.461px;">
+          <h4 class="font-medium text-purple-400 mb-2" id="el-9do1ki9d">NFT Purchased</h4>
+          <div class="space-y-2 text-sm text-white" id="el-cusceic0">
+            <div class="flex justify-between" id="el-new1">
+              <span id="el-new2">Contract</span>
+              <span class="font-mono text-right" id="el-new3"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-1 text-green-500" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="0.5">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg> MonadSea</span>
+            </div>
+            <div class="flex justify-between" id="el-new1">
+              <span id="el-new2">NFT:</span>
+              <span class="font-mono text-right" id="el-new3">RetardedNads #218</span>
+            </div>
+            <div class="flex justify-between" id="el-new1">
+              <span id="el-new2">Price</span>
+              <span class="font-mono text-right" id="el-new3">2 MON</span>
+            </div>
+            <div class="flex justify-between" id="el-flbdehoe">
+              <span id="el-jay4hu90">Status:</span>
+              <span class="font-medium text-right" id="el-hg104lm4">Success</span>
+            </div>
+            <div class="mt-3 pt-2 border-t border-neutral-400" id="el-rk2p5nyh">
+              <div class="flex justify-between" id="el-k3lu3ph1">
+                <span class="text-xs text-white">Hash: 0xf9bd...3afb</span>
+                <span class="text-xs text-white text-right">View details <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block ml-1 h-4 w-4 text-white">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M2 2.75651C2 2.38832 2.29848 2.08984 2.66667 2.08984H6C6.36819 2.08984 6.66667 2.38832 6.66667 2.75651C6.66667 3.1247 6.36819 3.42318 6 3.42318H3.33333V12.7565H12.6667V10.0898C12.6667 9.72165 12.9651 9.42318 13.3333 9.42318C13.7015 9.42318 14 9.72165 14 10.0898V13.4232C14 13.7914 13.7015 14.0898 13.3333 14.0898H2.66667C2.29848 14.0898 2 13.7914 2 13.4232V2.75651ZM9.33333 3.42318C8.96514 3.42318 8.66667 3.1247 8.66667 2.75651C8.66667 2.38832 8.96514 2.08984 9.33333 2.08984H13.3333C13.7015 2.08984 14 2.38832 14 2.75651V6.75651C14 7.1247 13.7015 7.42318 13.3333 7.42318C12.9651 7.42318 12.6667 7.1247 12.6667 6.75651V4.36599L7.80474 9.22792C7.54439 9.48827 7.12228 9.48827 6.86193 9.22792C6.60158 8.96757 6.60158 8.54546 6.86193 8.28511L11.7239 3.42318H9.33333Z" fill="currentColor"></path>
+                </svg></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- User Reply Options -->
+    <div class="flex justify-end" id="el-sp2n4322">
+      <div class="bg-[#9370DB] p-3 rounded-lg rounded-tr-none max-w-xs" id="el-2hhes8p3">
+        <p class="text-sm text-center text-white" id="el-cdaxrzye">Which NFTs do I have?</p>
+      </div>
+    </div>
+
+    <!-- Bot Alert Message - Security Alert (Moved below) -->
+    <div class="flex" id="el-8hdtjfdw">
+      <div class="h-8 w-8 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white text-xs text-center" id="el-kmktevnk">
+        NC
+      </div>
+      <div class="ml-2 bg-neutral-500 bg-opacity-20 border border-neutral-500 p-3 rounded-lg rounded-tl-none max-w-xs" id="el-oy6pz4lc" style="width: 256px;">
+        <h4 class="font-medium text-purple-400 mb-2" id="el-9do1ki9d">NFTs</h4>
+        <div class="space-y-2 text-sm text-white" id="el-cusceic0">
+          <div class="flex justify-between" id="el-new1">
+            <span class="font-mono">RetardedNads</span>
+            <span class="font-mono text-right" id="el-new3">#218</span>
+          </div>
+          <div class="flex justify-between" id="el-new1">
+            <span class="font-mono">MonadPunks</span>
+            <span class="font-mono text-right" id="el-new3">#1337</span>
+          </div>
+          <div class="flex justify-between" id="el-new1">
+            <span class="font-mono">OE Chogstar</span>
+            <span class="font-mono text-right" id="el-new3">6 Items</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bot Alert Message - Security Alert (Moved below) -->
+    <!-- <div class="flex" id="el-8hdtjfdw">
+      <div class="flex" id="el-wpwqazbh">
+        <div class="h-8 w-8 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white text-xs text-center" id="el-0gn42mox">
+          NC
+        </div>
+        <div class="ml-2 bg-neutral-500 bg-opacity-20 border border-neutral-500 p-3 rounded-lg rounded-tl-none max-w-xs" id="el-oy6pz4lc" style="width:274.461px;">
+          <h4 class="font-medium text-purple-400 mb-2" id="el-9do1ki9d">Token Transferred</h4>
+          <div class="space-y-2 text-sm text-white" id="el-cusceic0">
+            <div class="flex justify-between" id="el-new1">
+              <span id="el-new2">Token:</span>
+              <span class="font-mono text-right" id="el-new3">4.2 MON</span>
+            </div>
+            <div class="flex justify-between" id="el-ritdusjb">
+              <span id="el-doza1cla">To Address:</span>
+              <div class="address-container text-right" id="el-zvna0uhn">
+                <span class="font-mono truncated-address" id="el-zvna0uhn" title="0x495f947276749Ce646f68AC8c248420045cb7b5e">
+                  0x7a3d...f8e42
+                </span>
+              </div>
+              
+            </div>
+            <div class="flex justify-between" id="el-flbdehoe">
+              <span id="el-jay4hu90">Status:</span>
+              <span class="font-medium text-right" id="el-hg104lm4">Success</span>
+            </div>
+            <div class="mt-3 pt-2 border-t border-neutral-400" id="el-rk2p5nyh">
+              <div class="flex justify-between" id="el-k3lu3ph1">
+                <span class="text-xs text-white">Hash: 0xb949...8380</span>
+                <span class="text-xs text-white text-right">View details <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block ml-1 h-4 w-4 text-white">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M2 2.75651C2 2.38832 2.29848 2.08984 2.66667 2.08984H6C6.36819 2.08984 6.66667 2.38832 6.66667 2.75651C6.66667 3.1247 6.36819 3.42318 6 3.42318H3.33333V12.7565H12.6667V10.0898C12.6667 9.72165 12.9651 9.42318 13.3333 9.42318C13.7015 9.42318 14 9.72165 14 10.0898V13.4232C14 13.7914 13.7015 14.0898 13.3333 14.0898H2.66667C2.29848 14.0898 2 13.7914 2 13.4232V2.75651ZM9.33333 3.42318C8.96514 3.42318 8.66667 3.1247 8.66667 2.75651C8.66667 2.38832 8.96514 2.08984 9.33333 2.08984H13.3333C13.7015 2.08984 14 2.38832 14 2.75651V6.75651C14 7.1247 13.7015 7.42318 13.3333 7.42318C12.9651 7.42318 12.6667 7.1247 12.6667 6.75651V4.36599L7.80474 9.22792C7.54439 9.48827 7.12228 9.48827 6.86193 9.22792C6.60158 8.96757 6.60158 8.54546 6.86193 8.28511L11.7239 3.42318H9.33333Z" fill="currentColor"></path>
+                </svg></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+    
+
+
+
+  </div>
+</div>
+              </div>
+              
+              <div class="order-1 md:order-2" id="el-zqepiyob">
+                <h3 class="text-3xl font-bold text-white mb-4" id="el-wngytj7n">NadTracker</h3>
+  <p class="text-gray-300 mb-6" id="el-gzmcf5yq">Your complete wallet activity feed organized in a clean chat-style timeline.</p>
+  
+  <ul class="space-y-4" id="el-iy894z43">
+    <li class="flex items-start" id="el-reg6yw32">
+      <div class="h-6 w-6 rounded-full bg-[#9370DB] flex items-center justify-center mr-3 mt-0.5" id="el-m0oinj1y">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-y0dkfyy3">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-zgxi1ez9"></path>
+        </svg>
+      </div>
+      <div id="el-9x4023qk">
+        <h4 class="font-medium text-white" id="el-3yfabdve">Transaction History</h4>
+        <p class="text-gray-400" id="el-3l6b9s80">View your transactions, token movements, and NFT activities in a readable, conversational format</p>
+      </div>
+    </li>
+    
+    <li class="flex items-start" id="el-m5o13bg0">
+      <div class="h-6 w-6 rounded-full bg-[#9370DB] flex items-center justify-center mr-3 mt-0.5" id="el-rfo6ka29">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-yuzmnncs">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-ec408vhc"></path>
+        </svg>
+      </div>
+      <div id="el-mflklmpa">
+        <h4 class="font-medium text-white" id="el-ojurrxvu">Security Alerts</h4>
+        <p class="text-gray-400" id="el-au2h2knu">Get alerts for risky approvals and suspicious contracts. Stay protected from scams and exploits.</p>
+      </div>
+    </li>
+    
+    <li class="flex items-start" id="el-mzfsca3d">
+      <div class="h-6 w-6 rounded-full bg-[#9370DB] flex items-center justify-center mr-3 mt-0.5" id="el-lrc08cp8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-yobjsbn1">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-toy4gl3l"></path>
+        </svg>
+      </div>
+      <div id="el-x9afkovr">
+        <h4 class="font-medium text-white" id="el-7g9q5gjw">Balance Inquiries</h4>
+        <p class="text-gray-400" id="el-jsgtimmb">Ask questions about your balances, portfolio value, and token holdings at any time.</p>
+      </div>
+    </li>
+  </ul>
+</div>
+            </div>
+          </div>
+          
+          <!-- Tab 2: NadWatchdog -->
+          <div id="content-watchdog" class="tab-content hidden opacity-0 transition-opacity duration-300">
+            <div class="grid md:grid-cols-2 gap-12 items-center" id="el-3qitd2do">
+              <div class="order-2 md:order-1" id="el-omah6fcs">
+                <div class="p-6 bg-neutral-800 rounded-xl border border-neutral-700 shadow-lg" id="el-qscxn2du">
+                  <!-- Chat/Alert UI mockup -->
+                  <div class="flex items-center justify-between mb-4 border-b border-neutral-700 pb-3" id="el-wlb0nb5t">
+                    <div class="flex items-center" id="el-t0u3s9yn">
+                      <div class="h-10 w-10 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white font-bold text-sm" id="el-5tz0q23f">
+                        NC
+                      </div>
+                      <div class="ml-3" id="el-qbbr7f71">
+                        <div class="font-medium text-white" id="el-m3qzlsiv">NadChat</div>
+                        <div class="text-xs text-green-400" id="el-e81qf8nt">Online | Monitoring</div>
+                      </div>
+                    </div>
+                    <div class="text-neutral-400" id="el-9tm1vzay">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" id="el-1r8ra2tj">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" id="el-ocx2zuqg"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  
+                  <!-- Alerts -->
+                  <div class="space-y-4" id="el-n01ms2ej">
+                    <!-- High Risk Alert -->
+                    <div class="bg-red-500 bg-opacity-10 border border-red-500 rounded-lg p-4" id="el-rav28ktq">
+                      <div class="flex items-start" id="el-vl2w04f4">
+                        <div class="h-8 w-8 rounded-full bg-red-500 flex items-center justify-center text-white mr-3 shrink-0" id="el-s2si2y7f">
+                          ⚠️
+                        </div>
+                        <div id="el-hmmapmhj">
+                          <h5 class="font-medium text-red-400 mb-1" id="el-oshu6zyz">High Risk: Suspicious Contract</h5>
+                          <p class="text-white text-sm mb-2" id="el-m5q2x3ke">You have approved an unlimited token allowance to an unverified contract (0x8A9...22C).</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Medium Risk Alert -->
+                    <div class="bg-yellow-500 bg-opacity-10 border border-yellow-500 rounded-lg p-4" id="el-yaj5xvl1">
+                      <div class="flex items-start" id="el-jr25rsqn">
+                        <div class="h-8 w-8 rounded-full bg-yellow-500 flex items-center justify-center text-white mr-3 shrink-0" id="el-9c4zlaoe">
+                          ⚠️
+                        </div>
+                        <div id="el-7bi9ckec">
+                          <h5 class="font-medium text-yellow-400 mb-1" id="el-6od5o69a">Medium Risk: New Protocol</h5>
+                          <p class="text-white text-sm" id="el-4derw7ik">The dApp with contract (0x326...B38) was deployed less than 24 hours ago and has minimal liquidity.</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Low Risk Info -->
+                    <div class="bg-blue-500 bg-opacity-10 border border-blue-500 rounded-lg p-4" id="el-ip7wt7g8">
+                      <div class="flex items-start" id="el-mhjg7osu">
+                        <div class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center text-white mr-3 shrink-0" id="el-cmnhmpds">
+                          ℹ️
+                        </div>
+                        <div id="el-ggwfeean">
+                          <h5 class="font-medium text-blue-400 mb-1" id="el-nzup0trg">Security Tip</h5>
+                          <p class="text-white text-sm" id="el-uq2vlcgg">For additional safety, consider revoking these unused token approvals.</p>
+                          <button class="bg-blue-500 text-white text-sm py-1.5 px-3 rounded mt-3" id="el-tz4ewwbx">View Approvals</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="order-1 md:order-2" id="el-8o3p8z5q">
+                <h3 class="text-3xl font-bold text-white mb-4" id="el-wngytj7n">NadWatchdog</h3>
+                <p class="text-gray-300 mb-6" id="el-72y8umdu">Proactive security monitoring that alerts you to risky approvals and suspicious contracts.</p>
+                
+                <ul class="space-y-4" id="el-qx8a12tm">
+                  <li class="flex items-start" id="el-m0z5j2tw">
+                    <div class="h-6 w-6 rounded-full bg-[#9370DB] flex items-center justify-center mr-3 mt-0.5" id="el-6i43f6e9">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-noozmmar">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-xblhd8tx"></path>
+                      </svg>
+                    </div>
+                    <div id="el-ycs3di7d">
+                      <h4 class="font-medium text-white" id="el-h5qyuwpi">Smart Contract Scanning</h4>
+                      <p class="text-gray-400" id="el-4u49uk0u">Automatically scans contracts for vulnerabilities before you interact</p>
+                    </div>
+                  </li>
+                  
+                  <li class="flex items-start" id="el-er7miwu7">
+                    <div class="h-6 w-6 rounded-full bg-[#9370DB] flex items-center justify-center mr-3 mt-0.5" id="el-z5wy5u63">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-ur4vl5vr">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-cnq4fy4t"></path>
+                      </svg>
+                    </div>
+                    <div id="el-0rl98fm8">
+                      <h4 class="font-medium text-white" id="el-v9qk8240">Risk Assessment</h4>
+                      <p class="text-gray-400" id="el-2miuiwnx">Clear risk levels and explanations for every flagged transaction</p>
+                    </div>
+                  </li>
+                  
+                  <li class="flex items-start" id="el-crp5o75n">
+                    <div class="h-6 w-6 rounded-full bg-[#9370DB] flex items-center justify-center mr-3 mt-0.5" id="el-jxdhrf56">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-5suxhs8j">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-qjg0f3zd"></path>
+                      </svg>
+                    </div>
+                    <div id="el-s97yrv18">
+                      <h4 class="font-medium text-white" id="el-amplgwc2">Token Approval Management</h4>
+                      <p class="text-gray-400" id="el-d3yfn946">Monitor and review token approvals at regular intervals</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tab 3: NadNotify -->
+          <div id="content-notify" class="tab-content hidden opacity-0 transition-opacity duration-300">
+            <div class="grid md:grid-cols-2 gap-12 items-center" id="el-vzzns8ir">
+              <div class="order-2 md:order-1" id="el-jv95lcjt">
+                <div class="p-6 bg-neutral-800 rounded-xl border border-neutral-700 shadow-lg" id="el-r1fjmnk4">
+                  <!-- Notification UI mockup -->
+                  <div class="flex items-center justify-between mb-4 border-b border-neutral-700 pb-3" id="el-hlocwfd0">
+                    <div class="flex items-center" id="el-jwbob4ov">
+                      <div class="h-10 w-10 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white font-bold text-sm" id="el-seyrccxb">
+                        NC
+                      </div>
+                      <div class="ml-3" id="el-wp6kgi5e">
+                        <div class="font-medium text-white" id="el-m3qzlsiv">NadChat</div>
+                        <div class="text-xs text-green-400" id="el-e81qf8nt">Online | Monitoring</div>
+                      </div>
+                    </div>
+                    <div class="text-neutral-400" id="el-sh3vqhap">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" id="el-5xzfrm3e">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" id="el-18999ukw"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  
+                  <!-- Notification Settings -->
+                  <div class="space-y-4" id="el-htngsjho">
+                    <div class="bg-neutral-700 rounded-lg p-4" id="el-2dy3b7ut">
+                      <div class="flex justify-between items-center mb-3" id="el-m5izyjew">
+                        <h5 class="font-medium text-white" id="el-44zmw8cy">Transaction Alerts</h5>
+                        <div class="relative inline-block w-10 mr-2 align-middle" id="el-30cj3bjt">
+                          <input type="checkbox" id="toggle-tx" name="toggle-tx" class="opacity-0 w-0 h-0 absolute" checked="">
+                          <label for="toggle-tx" class="block overflow-hidden h-6 rounded-full bg-neutral-600 cursor-pointer" id="el-89xtqvh1">
+                            <span class="block h-6 w-6 rounded-full bg-[#9370DB] transform translate-x-4" id="el-p2nwkmn1"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-2 gap-2" id="el-w0r4wa1c">
+                        <div class="flex items-center" id="el-quop0oqg">
+                          <input type="checkbox" id="notify-sent" class="h-4 w-4 rounded border-gray-300 bg-neutral-700 text-[#9370DB]" checked="">
+                          <label for="notify-sent" class="ml-2 text-sm text-gray-300" id="el-vmffmdqg">Tokens Sent</label>
+                        </div>
+                        <div class="flex items-center" id="el-cfndkov3">
+                          <input type="checkbox" id="notify-received" class="h-4 w-4 rounded border-gray-300 bg-neutral-700 text-[#9370DB]" checked="">
+                          <label for="notify-received" class="ml-2 text-sm text-gray-300" id="el-vee92vqd">Tokens Received</label>
+                        </div>
+                        <div class="flex items-center" id="el-ih7i5o0h">
+                          <input type="checkbox" id="notify-swap" class="h-4 w-4 rounded border-gray-300 bg-neutral-700 text-[#9370DB]" checked="">
+                          <label for="notify-swap" class="ml-2 text-sm text-gray-300" id="el-xhd3uqyr">Token Swaps</label>
+                        </div>
+                        <div class="flex items-center" id="el-gw90pp2e">
+                          <input type="checkbox" id="notify-nft" class="h-4 w-4 rounded border-gray-300 bg-neutral-700 text-[#9370DB]" checked="">
+                          <label for="notify-nft" class="ml-2 text-sm text-gray-300" id="el-s8374b6s">NFT Activity</label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="bg-neutral-700 rounded-lg p-4" id="el-abdq1xhk">
+                      <div class="flex justify-between items-center mb-3" id="el-o31j7pi8">
+                        <h5 class="font-medium text-white" id="el-ro11r5ht">Value Thresholds</h5>
+                      </div>
+                      <div class="space-y-3" id="el-669lbku5">
+                        <div id="el-wrpxmocb">
+                          <label class="block text-sm text-gray-300 mb-1" id="el-uzgwqk3v">Minimum transaction value</label>
+                          <div class="flex items-center" id="el-g82a7334">
+                            <input type="range" min="0" max="100" value="25" class="w-full h-2 bg-neutral-600 rounded-lg appearance-none cursor-pointer" id="el-a91em6ey">
+                            <span class="ml-2 text-sm text-white" id="el-29nezgd8">$25</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="bg-neutral-700 rounded-lg p-4" id="el-luc6h7e2">
+                      <div class="flex justify-between items-center mb-3" id="el-cnfvlmhj">
+                        <h5 class="font-medium text-white" id="el-08y38awh">Delivery Methods</h5>
+                      </div>
+                      <div class="space-y-2" id="el-4jh31s7m">
+                        <div class="flex items-center justify-between" id="el-d4pxaapc">
+                          <div class="flex items-center" id="el-h9y34g5q">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-400 mr-2" viewBox="0 0 20 20" fill="currentColor" id="el-4kccfic0">
+                              <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" id="el-akib0hu7"></path>
+                              <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" id="el-yiycdvaq"></path>
+                            </svg>
+                            <span class="text-gray-300" id="el-vk067d1f">Telegram</span>
+                          </div>
+                          <div class="relative inline-block w-10 mr-2 align-middle" id="el-i1hjovpa">
+                            <input type="checkbox" id="toggle-telegram" name="toggle-telegram" class="opacity-0 w-0 h-0 absolute" checked="">
+                            <label for="toggle-telegram" class="block overflow-hidden h-6 rounded-full bg-neutral-600 cursor-pointer" id="el-o37ystyh">
+                              <span class="block h-6 w-6 rounded-full bg-[#9370DB] transform translate-x-4" id="el-xv3pywrg"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="flex items-center justify-between" id="el-iryafker">
+                          <div class="flex items-center" id="el-bwiu7lpy">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-400 mr-2" viewBox="0 0 20 20" fill="currentColor" id="el-16i6at75">
+                              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" id="el-wtfx37zu"></path>
+                              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" id="el-svmmote3"></path>
+                            </svg>
+                            <span class="text-gray-300" id="el-ymm5z7a6">Email</span>
+                          </div>
+                          <div class="relative inline-block w-10 mr-2 align-middle" id="el-wqpgwyme">
+                            <input type="checkbox" id="toggle-email" name="toggle-email" class="opacity-0 w-0 h-0 absolute">
+                            <label for="toggle-email" class="block overflow-hidden h-6 rounded-full bg-neutral-600 cursor-pointer" id="el-q0jiwet0">
+                              <span class="block h-6 w-6 rounded-full bg-neutral-500 transform" id="el-errqjr1q"></span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="order-1 md:order-2" id="el-xbd06rub">
+                <h3 class="text-3xl font-bold text-white mb-4" id="el-u6ofozs8">NadNotify</h3>
+                <p class="text-gray-300 mb-6" id="el-ymqeqtx8">Customizable real-time notifications for all your wallet events and activities.</p>
+                
+                <ul class="space-y-4" id="el-w027cpvu">
+                  <li class="flex items-start" id="el-ngatoex1">
+                    <div class="h-6 w-6 rounded-full bg-[#9370DB] flex items-center justify-center mr-3 mt-0.5" id="el-qhk3myq2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-cgqez8ce">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-yag71qxk"></path>
+                      </svg>
+                    </div>
+                    <div id="el-4p0fk2k0">
+                      <h4 class="font-medium text-white" id="el-4n1cr3sd">Custom Alert Filters</h4>
+                      <p class="text-gray-400" id="el-ssl9dh3q">Set up personalized notifications based on transaction type, value, or protocol</p>
+                    </div>
+                  </li>
+                  
+                  <li class="flex items-start" id="el-vli64s2p">
+                    <div class="h-6 w-6 rounded-full bg-[#9370DB] flex items-center justify-center mr-3 mt-0.5" id="el-zvvl506x">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-ko99t8pq">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-jck5cza9"></path>
+                      </svg>
+                    </div>
+                    <div id="el-gojnpwum">
+                      <h4 class="font-medium text-white" id="el-nedbl3gs">Multi-Channel Delivery</h4>
+                      <p class="text-gray-400" id="el-fiibjc8e">Get alerts via Telegram or email</p>
+                    </div>
+                  </li>
+                  
+                  <li class="flex items-start" id="el-j3jtoako">
+                    <div class="h-6 w-6 rounded-full bg-[#9370DB] flex items-center justify-center mr-3 mt-0.5" id="el-uyda1mub">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-kq45elfv">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-eodmz63c"></path>
+                      </svg>
+                    </div>
+                    <div id="el-reuac7il">
+                      <h4 class="font-medium text-white" id="el-uzf8je74">Price Movement Alerts</h4>
+                      <p class="text-gray-400" id="el-cta54ffb">Stay informed about significant price changes for tokens in your portfolio</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Floating Elements -->
+    <div class="hidden lg:block absolute -right-16 bottom-20 w-32 h-32 opacity-40" id="el-4if2gkgt">
+      <img src="https://images.unsplash.com/photo-1719399184280-89cfdecba587?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8ZmVhdHVyZXMlMjBzaG93Y2FzZSUyMGRldGFpbGVkJTIwZGVtb25zdHJhdGl2ZXxlbnwwfDB8fHwxNzQzMTYwMTI3fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080?q=80" alt="A group of people standing in a dark room" onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height" width="11648" height="8736" class="w-full h-full object-cover rounded-full blur-lg" id="el-cxf3h75y">
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        // Function to activate a tab
+        function activateTab(tabId) {
+          // Hide all tab contents
+          tabContents.forEach(content => {
+            content.classList.add('hidden');
+            content.classList.remove('block');
+            content.style.opacity = '0';
+          });
+          
+          // Remove active state from all buttons
+          tabButtons.forEach(button => {
+            button.classList.remove('bg-[#8A2BE2]');
+            button.classList.add('bg-neutral-800');
+            button.classList.remove('text-white');
+            button.classList.add('text-gray-300');
+          });
+          
+          // Show the selected tab content
+          const activeContent = document.getElementById('content-' + tabId);
+          if (activeContent) {
+            activeContent.classList.remove('hidden');
+            activeContent.classList.add('block');
+            activeContent.style.opacity = '1';
+          }
+          
+          // Set active state for the clicked button
+          const activeButton = document.querySelector(`.tab-btn[data-target="content-${tabId}"]`);
+          if (activeButton) {
+            activeButton.classList.remove('bg-neutral-800');
+            activeButton.classList.add('bg-[#8A2BE2]');
+            activeButton.classList.remove('text-gray-300');
+            activeButton.classList.add('text-white');
+          }
+        }
+        
+        // Add click event listeners to tab buttons
+        tabButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            const tabId = this.getAttribute('data-target').replace('content-', '');
+            activateTab(tabId);
+          });
+        });
+        
+        // Initialize with first tab active
+        activateTab('tracker');
+        
+        // Toggle switches handling
+        const toggleSwitches = document.querySelectorAll('input[type="checkbox"][id^="toggle-"]');
+        toggleSwitches.forEach(toggle => {
+          toggle.addEventListener('change', function() {
+            const label = this.nextElementSibling;
+            const span = label.querySelector('span');
+            
+            if (this.checked) {
+              span.classList.add('translate-x-4');
+              span.classList.remove('bg-neutral-500');
+              span.classList.add('bg-[#9370DB]');
+            } else {
+              span.classList.remove('translate-x-4');
+              span.classList.add('bg-neutral-500');
+              span.classList.remove('bg-[#9370DB]');
+            }
+          });
+        });
+      });
+    </script>
+  </section>
+</div>
+
+              
+              
+              
+</element><element id="58638e6e-9938-418e-8f24-dc4c09880c50" data-section-id="58638e6e-9938-418e-8f24-dc4c09880c50">
+
+
+                
+                
+                
+<div id="root">
+  <section id="how-it-works" class="bg-neutral-900 py-24 relative overflow-hidden">
+    <!-- Background elements -->
+    <div class="absolute inset-0 opacity-5" id="el-78ywbmkn">
+      <div class="absolute top-1/4 left-0 w-1/3 h-1/3 bg-[#8A2BE2] rounded-full blur-3xl" id="el-ht4ndhbh"></div>
+      <div class="absolute bottom-1/4 right-0 w-1/3 h-1/3 bg-[#9370DB] rounded-full blur-3xl" id="el-ofqw4khe"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10" id="el-0mv3zmx2">
+      <!-- Section header -->
+      <div class="text-center mb-16" id="el-1t8kw1lz">
+        <h2 class="text-4xl font-bold text-white mb-4" id="el-mul2xgs2">How It Works</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto" id="el-ty0t9scq">Get started with NadChat in three simple steps. No complicated setup, just secure wallet monitoring.</p>
+      </div>
+      
+      <!-- Steps Container -->
+      <div class="max-w-6xl mx-auto" id="el-42o7h820">
+        <div class="grid md:grid-cols-3 gap-8" id="el-swv89ptn">
+          <!-- Step 1 -->
+          <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 relative overflow-hidden group hover:border-[#9370DB] transition-all duration-300" id="el-kjsgmiml">
+            <div class="absolute -right-4 -top-4 w-24 h-24 bg-[#8A2BE2] opacity-10 rounded-full blur-lg group-hover:opacity-20 transition-opacity duration-300" id="el-k3qq2tf1"></div>
+            
+            <div class="flex items-center justify-center w-16 h-16 bg-neutral-700 rounded-full mb-6 relative z-10" id="el-86d2pjhg">
+              <span class="text-3xl text-[#9370DB]" id="el-rj6ibvx4">1</span>
+            </div>
+            
+            <h3 class="text-xl font-bold text-white mb-3" id="el-oizzko02">Provide Your Wallet</h3>
+            <p class="text-gray-300 mb-4" id="el-kjx2cxx2">Visit the NadChat Telegram bot and provide the Monad wallet addresses you wish to monitor.</p>
+            
+            <!-- Mini UI Illustration -->
+            <div class="mt-6 bg-neutral-900 rounded-lg p-4 border border-neutral-700" id="el-1lo1qkim">
+              <div class="flex items-center gap-3 mb-3" id="el-xfk25y0g">
+                <div class="h-8 w-8 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white text-xs" id="el-qb27mbcn">
+                  NC
+                </div>
+                <div class="text-sm text-white" id="el-hjg4mzcb">Welcome to NadChat! Provide the wallet address you want to monitor.</div>
+              </div>
+              
+            </div>
+          </div>
+          
+          <!-- Step 2 -->
+          <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 relative overflow-hidden group hover:border-[#9370DB] transition-all duration-300" id="el-hwulcznv">
+            <div class="absolute -right-4 -top-4 w-24 h-24 bg-[#8A2BE2] opacity-10 rounded-full blur-lg group-hover:opacity-20 transition-opacity duration-300" id="el-acfirufn"></div>
+            
+            <div class="flex items-center justify-center w-16 h-16 bg-neutral-700 rounded-full mb-6 relative z-10" id="el-h5gnf9t3">
+              <span class="text-3xl text-[#9370DB]" id="el-vzfafnx3">2</span>
+            </div>
+            
+            <h3 class="text-xl font-bold text-white mb-3" id="el-gtz0cov2">Customize Your Settings</h3>
+            <p class="text-gray-300 mb-4" id="el-5dgex45p">Set up your notification preferences and security alert thresholds.</p>
+            
+            <!-- Mini UI Illustration -->
+            <div class="mt-6 bg-neutral-900 rounded-lg p-4 border border-neutral-700" id="el-0unrvvpf">
+              <div class="flex items-center gap-3 mb-3" id="el-41v3268e">
+                <div class="h-8 w-8 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white text-xs" id="el-i4x23y3f">
+                  NC
+                </div>
+                <div class="text-sm text-white" id="el-upxkmlxb">What would you like me to monitor?</div>
+              </div>
+              <div class="space-y-2" id="el-iufbuh5w">
+                <div class="flex items-center" id="el-gmb8swzo">
+                  <div class="w-4 h-4 rounded bg-[#9370DB] mr-2" id="el-qvjhqt5d"></div>
+                  <span class="text-sm text-white" id="el-w96acu9h">Tokens Sent</span>
+                </div>
+                <div class="flex items-center" id="el-gmb8swzo">
+                  <div class="w-4 h-4 rounded bg-[#9370DB] mr-2" id="el-qvjhqt5d"></div>
+                  <span class="text-sm text-white" id="el-w96acu9h">Tokens Received</span>
+                </div>
+                <div class="flex items-center" id="el-ao0jqmod">
+                  <div class="w-4 h-4 rounded bg-[#9370DB] mr-2" id="el-8gggjqmq"></div>
+                  <span class="text-sm text-white" id="el-h77c49k0">Token Swaps</span>
+                </div>
+                <div class="flex items-center" id="el-jd4ad03v">
+                  <div class="w-4 h-4 rounded border border-neutral-600 mr-2" id="el-w8dirs78"></div>
+                  <span class="text-sm text-white" id="el-cq6uzq52">NFT activity</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Step 3 -->
+          <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 relative overflow-hidden group hover:border-[#9370DB] transition-all duration-300" id="el-y53zvxl0">
+            <div class="absolute -right-4 -top-4 w-24 h-24 bg-[#8A2BE2] opacity-10 rounded-full blur-lg group-hover:opacity-20 transition-opacity duration-300" id="el-91erucdb"></div>
+            
+            <div class="flex items-center justify-center w-16 h-16 bg-neutral-700 rounded-full mb-6 relative z-10" id="el-0d4hblb4">
+              <span class="text-3xl text-[#9370DB]" id="el-9st3459k">3</span>
+            </div>
+            
+            <h3 class="text-xl font-bold text-red-500 mb-3" id="el-rf9fm1ey" style="font-family: Sora, sans-serif; font-size: 20px; font-weight: 700; line-height: 28px; letter-spacing: normal; text-align: start; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px 0px 12px; display: block; position: static; align-items: normal; justify-content: normal;">Receive Alerts &amp; Updates</h3>
+            <p class="text-gray-300 mb-4" id="el-0s8xe5s5">Get real-time notifications about your wallet activity and security.</p>
+            
+            <!-- Mini UI Illustration -->
+            <div class="mt-6 bg-neutral-900 rounded-lg p-4 border border-neutral-700" id="el-mz6z7n85">
+              <div class="flex items-center gap-3 mb-3" id="el-fb71203c">
+                <div class="h-8 w-8 rounded-full bg-[#8A2BE2] flex items-center justify-center text-white text-xs" id="el-kxregr9o">
+                  NC
+                </div>
+                <div class="text-sm text-white" id="el-qji1qjbk">Alert: You've received 0.5 MON from 0x71C...F29B</div>
+              </div>
+              <div class="flex justify-end" id="el-a7p1y3s7">
+                <div class="text-sm py-1 px-3 rounded-lg bg-neutral-700 text-white" id="el-8a4ojor7">Show me details</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Detailed Workflow Image/Diagram -->
+        <div class="mt-16 relative" id="el-y00gq6dm">
+          
+        </div>
+        
+        <!-- FAQ/Common Questions -->
+        <div class="mt-16" id="faq">
+          <h3 class="text-2xl font-bold text-white mb-8 text-center" id="el-9f64bppc">FAQ</h3>
+          
+          <div class="grid md:grid-cols-2 gap-6" id="el-6xl2fflq">
+            <div class="bg-neutral-800 rounded-lg p-6 border border-neutral-700" id="el-z246s2q1">
+              <h4 class="font-bold text-white mb-2" id="el-jlvlgcin">Is NadChat secure to use?</h4>
+              <p class="text-gray-300" id="el-e3asya3o">Yes, NadChat only requires the wallet addresses. We never ask for private keys or seed phrases.</p>
+            </div>
+            
+            <div class="bg-neutral-800 rounded-lg p-6 border border-neutral-700" id="el-kxzq112p">
+              <h4 class="font-bold text-white mb-2" id="el-i83zcdsp">How quickly will I receive alerts?</h4>
+              <p class="text-gray-300" id="el-ddes5dyy">Instant notifications in real-time. As soon as activity is detected on your wallet, you'll be alerted.</p>
+            </div>
+            
+            <div class="bg-neutral-800 rounded-lg p-6 border border-neutral-700" id="el-cuvgp828">
+              <h4 class="font-bold text-white mb-2" id="el-h17dfq40">Can I monitor multiple wallets?</h4>
+              <p class="text-gray-300" id="el-bae5ix1o">Yes, you can connect and monitor multiple Monad wallets from a single NadChat interface.</p>
+            </div>
+            
+            <div class="bg-neutral-800 rounded-lg p-6 border border-neutral-700" id="el-v5zamdxr">
+              <h4 class="font-bold text-white mb-2" id="el-yrq2z6bc">Is there a cost to use NadChat?</h4>
+              <p class="text-gray-300" id="el-agz7bbvb">Monitor up to 2 wallets for free. Hold a NadChat Premium Pass to track up to 10 addresses and unlock advanced features.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- CTA Section -->
+      <div class="mt-16 text-center" id="el-8ltzlavw">
+        <h3 class="text-2xl font-bold text-white mb-4" id="el-zvkrfvge">Ready to secure your wallet?</h3>
+        <p class="text-gray-300 max-w-2xl mx-auto mb-8" id="el-utsn1ezf">Start monitoring your Monad wallet activity and get real-time security alerts today.</p>
+        
+        <a href="https://t.me/nadchat_bot" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#8A2BE2] hover:bg-[#9370DB] text-white py-3 px-8 rounded-lg transition-all duration-300 text-lg font-medium" id="el-2huv6szd">
+          <span id="el-rzfkehdq">Start Tracking My Wallet</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor" id="el-qroqxj4d">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" id="el-qn06cxk6"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+              
+              
+              
+</element>
+
+<element id="31200d73-80af-4ddc-aab8-d749c391b5bf" data-section-id="31200d73-80af-4ddc-aab8-d749c391b5bf">
+
+
+                
+                
+<div id="root">
+  <section id="testimonials" class="bg-neutral-900 py-24 relative overflow-hidden">
+    <!-- Background elements -->
+    <div class="absolute inset-0 opacity-5" id="el-yo5f5lo5">
+      <div class="absolute top-1/3 right-0 w-1/3 h-1/3 bg-[#8A2BE2] rounded-full blur-3xl" id="el-daojieo5"></div>
+      <div class="absolute bottom-1/3 left-0 w-1/3 h-1/3 bg-[#9370DB] rounded-full blur-3xl" id="el-ii399zjp"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10" id="el-9gv9s496">
+      <!-- Section header -->
+      <div class="text-center mb-16" id="el-tyoprhwd">
+        <h2 class="text-4xl font-bold text-white mb-4" id="el-fzs8mdpg">Testimonials</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto" id="el-qyvk6gjh">Hear what the Monad community is saying about their experience with NadChat.</p>
+      </div>
+      
+      <!-- Testimonials Cards Grid -->
+      <div class="max-w-6xl mx-auto mb-16" id="el-vhgatasy">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="el-w6ekrzaa">
+          <!-- Testimonial Card 1 -->
+          <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 hover:border-[#9370DB] transition-all duration-300 flex flex-col h-full relative overflow-hidden group" id="el-6lksagq8">
+            <div class="absolute -right-4 -top-4 w-24 h-24 bg-[#8A2BE2] opacity-5 rounded-full blur-lg group-hover:opacity-10 transition-opacity duration-300" id="el-h3gylb8m"></div>
+            
+            <!-- Quote symbol -->
+            <div class="text-[#9370DB] text-5xl font-serif mb-4 opacity-50" id="el-6vkbyblt">"</div>
+            
+            <!-- Testimonial content -->
+            <div class="mb-6 flex-grow" id="el-witx68ih">
+              <p class="text-gray-300 italic mb-4" id="el-2rmkdp6j">NadChat alerted me to a suspicious smart contract approval that could have drained my wallet. The real-time alerts literally saved me thousands of dollars.</p>
+              
+              <!-- Rating -->
+              <div class="flex items-center mb-4" id="el-ezginz7o">
+                <div class="flex" id="el-ejcy8ejr">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" id="el-momymyb5">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" id="el-h5001b22"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" id="el-mf8htddj">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" id="el-da1o49kc"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" id="el-i1z1qht7">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" id="el-zjwe3cmd"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" id="el-8qzs35eo">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" id="el-hen7bu2f"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" id="el-2msatiez">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" id="el-cc6oq7gn"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Author info -->
+            <div class="flex items-center mt-auto" id="el-0rzgcu7g">
+              <div class="h-10 w-10 rounded-full bg-[#9370DB] bg-opacity-20 flex items-center justify-center text-white" id="el-g10jgtgf">
+                <span class="text-[#9370DB] font-medium" id="el-8a4u1wee">MK</span>
+              </div>
+              <div class="ml-3" id="el-0kjkovpx">
+                <div class="font-medium text-white" id="el-41cuarch">Monad Knight</div>
+                <div class="text-xs text-gray-400" id="el-88hom6qs">Early Adopter</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial Card 2 -->
+          <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 hover:border-[#9370DB] transition-all duration-300 flex flex-col h-full relative overflow-hidden group" id="el-ynmnghbn">
+            <div class="absolute -right-4 -top-4 w-24 h-24 bg-[#8A2BE2] opacity-5 rounded-full blur-lg group-hover:opacity-10 transition-opacity duration-300" id="el-rp3m3gqt"></div>
+            
+            <!-- Quote symbol -->
+            <div class="text-[#9370DB] text-5xl font-serif mb-4 opacity-50" id="el-su41u6bc">"</div>
+            
+            <!-- Testimonial content -->
+            <div class="mb-6 flex-grow" id="el-auouc469">
+              <p class="text-gray-300 italic mb-4" id="el-ymjxm5bw">The chat interface makes it so intuitive to check my transaction history. I love how it breaks down complex blockchain data into simple, understandable language.</p>
+              
+              <!-- Rating -->
+              <div class="flex items-center mb-4" id="el-hs4kaubk">
+                <div class="flex" id="el-m6xneok9">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" id="el-6wxd0zy5">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" id="el-m8h6bijs"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" id="el-yx9kndwh">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" id="el-t8satink"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" id="el-wymbotqc">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" id="el-t930ppys"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" id="el-zk0cs5hg">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" id="el-4u7jnplo"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" id="el-kaupdbmk">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" id="el-n25qvqu8"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Author info -->
+            <div class="flex items-center mt-auto" id="el-5oy4ee75">
+              <div class="h-10 w-10 rounded-full bg-[#9370DB] bg-opacity-20 flex items-center justify-center text-white" id="el-cipt6ul0">
+                <span class="text-[#9370DB] font-medium" id="el-t6hpa6id">MD</span>
+              </div>
+              <div class="ml-3" id="el-rfhob6bk">
+                <div class="font-medium text-white" id="el-u6u5fjgo">Monad Developer</div>
+                <div class="text-xs text-gray-400" id="el-9hxqopzk">Protocol Builder</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial Card 3 -->
+          <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 hover:border-[#9370DB] transition-all duration-300 flex flex-col h-full relative overflow-hidden group" id="el-epw3csqt">
+            <div class="absolute -right-4 -top-4 w-24 h-24 bg-[#8A2BE2] opacity-5 rounded-full blur-lg group-hover:opacity-10 transition-opacity duration-300" id="el-jn76nq9l"></div>
+            
+            <!-- Quote symbol -->
+            <div class="text-[#9370DB] text-5xl font-serif mb-4 opacity-50" id="el-osonbsl1">"</div>
+            
+            <!-- Testimonial content -->
+            <div class="mb-6 flex-grow" id="el-0nsmfj59">
+              <p class="text-gray-300 italic mb-4" id="el-443c04s8">As a frequent DeFi user, the custom notifications are a game-changer. I get alerts about my LP positions and yield farms without constant manual checking.</p>
+              
+              <!-- Rating -->
+              <div class="flex items-center mb-4" id="el-y6gv6zvq">
+                <div class="flex" id="el-4ytc509i">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" id="el-hqd9999n">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" id="el-dkfqt6hd"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" id="el-dwmkh7a1">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" id="el-1nwuzem9"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" id="el-5gli8ft4">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" id="el-f8fuis3i"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" id="el-l7lkjol5">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" id="el-ofwlg8gp"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" id="el-xx4t4g5w">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" id="el-ss7acxn1"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Author info -->
+            <div class="flex items-center mt-auto" id="el-invd8kjg">
+              <div class="h-10 w-10 rounded-full bg-[#9370DB] bg-opacity-20 flex items-center justify-center text-white" id="el-taqb1rc5">
+                <span class="text-[#9370DB] font-medium" id="el-xijpzog9">DE</span>
+              </div>
+              <div class="ml-3" id="el-2vgl9j6z">
+                <div class="font-medium text-white" id="el-5pphgbwc">DeFi Explorer</div>
+                <div class="text-xs text-gray-400" id="el-gjhqwmng">Yield Farmer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial Carousel -->
+      <div class="mt-24 relative w-full overflow-hidden" aria-label="Customer testimonials carousel" id="el-yg5tb8gl">
+        <h3 class="text-2xl font-bold text-white mb-8 text-center" id="el-1a6alnlv">What Our Users Say</h3>
+        
+        <!-- Carousel Container -->
+        <div class="relative w-full overflow-hidden" id="el-rfy05lpw">
+          <!-- Mask/Gradient effects for smooth scroll -->
+          <div class="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-neutral-900 to-transparent z-10" id="el-4g1fp9hh"></div>
+          <div class="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-neutral-900 to-transparent z-10" id="el-3ss1hmn1"></div>
+          
+          <!-- Scrolling testimonial container -->
+          <div class="flex animate-scroll gap-6 py-4" style="--animation-duration: 40s; --animation-direction: forwards;" id="el-wfeb70av">
+            <!-- Duplicate set of testimonials for seamless looping -->
+            <!-- Scroll group 1 -->
+            <div class="flex-shrink-0 w-80 bg-neutral-800 rounded-xl p-5 border border-neutral-700" id="el-kpru7d4s">
+              <p class="text-gray-300 italic mb-4" id="el-bzjx8mkz">"NadChat has completely changed how I manage my crypto assets. The security features are incredible!"</p>
+              <div class="flex items-center" id="el-6pxk0rz2">
+                <div class="h-8 w-8 rounded-full bg-[#9370DB] bg-opacity-20 flex items-center justify-center text-white" id="el-c5ko1ry7">
+                  <span class="text-[#9370DB] font-medium text-xs" id="el-dw8gtuxj">JD</span>
+                </div>
+                <div class="ml-3" id="el-mr9sgwxq">
+                  <div class="font-medium text-white text-sm" id="el-aa738h1m">John D.</div>
+                  <div class="text-xs text-gray-400" id="el-2rzr5q81">Monad User</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex-shrink-0 w-80 bg-neutral-800 rounded-xl p-5 border border-neutral-700" id="el-berlu718">
+              <p class="text-gray-300 italic mb-4" id="el-h2gfm59f">"The real-time notifications are a game-changer. I'm always in the know about my wallet activity."</p>
+              <div class="flex items-center" id="el-s35ktkbn">
+                <div class="h-8 w-8 rounded-full bg-[#9370DB] bg-opacity-20 flex items-center justify-center text-white" id="el-na1k7occ">
+                  <span class="text-[#9370DB] font-medium text-xs" id="el-7rsmunr2">AS</span>
+                </div>
+                <div class="ml-3" id="el-a2dp2gr1">
+                  <div class="font-medium text-white text-sm" id="el-y6511584">Alice S.</div>
+                  <div class="text-xs text-gray-400" id="el-8m6fwj95">DeFi User</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex-shrink-0 w-80 bg-neutral-800 rounded-xl p-5 border border-neutral-700" id="el-zhwplg7h">
+              <p class="text-gray-300 italic mb-4" id="el-v1htsjl7">"I sleep better knowing NadChat is monitoring my wallets for suspicious activity 24/7."</p>
+              <div class="flex items-center" id="el-6565kkz8">
+                <div class="h-8 w-8 rounded-full bg-[#9370DB] bg-opacity-20 flex items-center justify-center text-white" id="el-yoeb7wbd">
+                  <span class="text-[#9370DB] font-medium text-xs" id="el-3pw1v7om">RB</span>
+                </div>
+                <div class="ml-3" id="el-slfwlfkm">
+                  <div class="font-medium text-white text-sm" id="el-xp42hnup">Robert B.</div>
+                  <div class="text-xs text-gray-400" id="el-qk0wd8jf">NFT Collector</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex-shrink-0 w-80 bg-neutral-800 rounded-xl p-5 border border-neutral-700" id="el-0ri2o1gn">
+              <p class="text-gray-300 italic mb-4" id="el-r98g6xqr">"The chat interface makes tracking my transactions so much more intuitive than traditional explorers."</p>
+              <div class="flex items-center" id="el-r3ewzs96">
+                <div class="h-8 w-8 rounded-full bg-[#9370DB] bg-opacity-20 flex items-center justify-center text-white" id="el-i7fy6gx3">
+                  <span class="text-[#9370DB] font-medium text-xs" id="el-c60hob1n">CT</span>
+                </div>
+                <div class="ml-3" id="el-ogaj8sei">
+                  <div class="font-medium text-white text-sm" id="el-8u6h8wcw">Chris T.</div>
+                  <div class="text-xs text-gray-400" id="el-5q1yqq31">Developer</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex-shrink-0 w-80 bg-neutral-800 rounded-xl p-5 border border-neutral-700" id="el-r6gjt6dk">
+              <p class="text-gray-300 italic mb-4" id="el-2w070xbx">"I've tried several wallet monitors but NadChat's security alerts are by far the most accurate and helpful."</p>
+              <div class="flex items-center" id="el-z8k1x7zx">
+                <div class="h-8 w-8 rounded-full bg-[#9370DB] bg-opacity-20 flex items-center justify-center text-white" id="el-sfvh95vy">
+                  <span class="text-[#9370DB] font-medium text-xs" id="el-sz01dsoj">MM</span>
+                </div>
+                <div class="ml-3" id="el-ups34gp9">
+                  <div class="font-medium text-white text-sm" id="el-3yd2wihx">Maria M.</div>
+                  <div class="text-xs text-gray-400" id="el-n89899gz">Trader</div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Scroll group 2 (duplicate for seamless looping) -->
+            <div class="flex-shrink-0 w-80 bg-neutral-800 rounded-xl p-5 border border-neutral-700" id="el-s7rag8oa">
+              <p class="text-gray-300 italic mb-4" id="el-4p1pymv8">"NadChat has completely changed how I manage my crypto assets. The security features are incredible!"</p>
+              <div class="flex items-center" id="el-u3thar60">
+                <div class="h-8 w-8 rounded-full bg-[#9370DB] bg-opacity-20 flex items-center justify-center text-white" id="el-fkkex0ct">
+                  <span class="text-[#9370DB] font-medium text-xs" id="el-f1mevark">JD</span>
+                </div>
+                <div class="ml-3" id="el-iz2z6lrg">
+                  <div class="font-medium text-white text-sm" id="el-z5yn3ytq">John D.</div>
+                  <div class="text-xs text-gray-400" id="el-n6ytv4dn">Monad User</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex-shrink-0 w-80 bg-neutral-800 rounded-xl p-5 border border-neutral-700" id="el-j0262wc1">
+              <p class="text-gray-300 italic mb-4" id="el-mgb12kq1">"The real-time notifications are a game-changer. I'm always in the know about my wallet activity."</p>
+              <div class="flex items-center" id="el-ugwwxvd2">
+                <div class="h-8 w-8 rounded-full bg-[#9370DB] bg-opacity-20 flex items-center justify-center text-white" id="el-x5x1x34g">
+                  <span class="text-[#9370DB] font-medium text-xs" id="el-069ilghd">AS</span>
+                </div>
+                <div class="ml-3" id="el-0w8k3vn8">
+                  <div class="font-medium text-white text-sm" id="el-wpc0j2d9">Alice S.</div>
+                  <div class="text-xs text-gray-400" id="el-cnrxrfne">DeFi User</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex-shrink-0 w-80 bg-neutral-800 rounded-xl p-5 border border-neutral-700" id="el-2tofk1ki">
+              <p class="text-gray-300 italic mb-4" id="el-bumr8o6h">"I sleep better knowing NadChat is monitoring my wallets for suspicious activity 24/7."</p>
+              <div class="flex items-center" id="el-xeqbegs5">
+                <div class="h-8 w-8 rounded-full bg-[#9370DB] bg-opacity-20 flex items-center justify-center text-white" id="el-cip8ktbl">
+                  <span class="text-[#9370DB] font-medium text-xs" id="el-8av0rltb">RB</span>
+                </div>
+                <div class="ml-3" id="el-de68njxw">
+                  <div class="font-medium text-white text-sm" id="el-7tm2pgod">Robert B.</div>
+                  <div class="text-xs text-gray-400" id="el-it2oon0o">NFT Collector</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex-shrink-0 w-80 bg-neutral-800 rounded-xl p-5 border border-neutral-700" id="el-fazl63w2">
+              <p class="text-gray-300 italic mb-4" id="el-m8ea97uc">"The chat interface makes tracking my transactions so much more intuitive than traditional explorers."</p>
+              <div class="flex items-center" id="el-f5ggfhc6">
+                <div class="h-8 w-8 rounded-full bg-[#9370DB] bg-opacity-20 flex items-center justify-center text-white" id="el-lps9ufec">
+                  <span class="text-[#9370DB] font-medium text-xs" id="el-py9xija2">CT</span>
+                </div>
+                <div class="ml-3" id="el-1agac27i">
+                  <div class="font-medium text-white text-sm" id="el-7yepk46j">Chris T.</div>
+                  <div class="text-xs text-gray-400" id="el-2j1riiav">Developer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Featured Testimonial with Image -->
+      <div class="mt-24" id="el-2vn2543k">
+        <div class="bg-neutral-800 rounded-xl overflow-hidden" id="el-r6dsa7v5">
+          <div class="md:flex" id="el-k7v97svv">
+            <!-- Image column -->
+            <div class="md:w-1/3 relative" id="el-u55p4jf0">
+              <img src="https://images.unsplash.com/photo-1659482633369-9fe69af50bfb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8dGVzdGltb25pYWxzJTIwZmVlZGJhY2slMjBhdXRoZW50aWMlMjB0cnVzdHdvcnRoeXxlbnwwfDF8fHwxNzQzMTYwMTI3fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080?q=80" alt="a person holding a cell phone" onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height" width="4160" height="6084" class="w-full h-full object-cover md:absolute inset-0" id="el-i4y276w1">
+              <div class="absolute bottom-0 left-0 p-2 text-xs text-white bg-black bg-opacity-50" id="el-st4hijpm">
+                Photo by Boxed Water Is Better
+              </div>
+            </div>
+            
+            <!-- Content column -->
+            
+          </div>
+        </div>
+      </div>
+      
+      <!-- Stats Section -->
+      <div class="mt-24" id="el-bvhsfy11">
+        <div class="bg-neutral-800 rounded-xl p-8 md:p-12 border border-neutral-700" id="el-l3ob9amy">
+          <div class="text-center mb-12" id="el-566uxukf">
+            <h3 class="text-2xl font-bold text-white mb-4" id="el-dhsia4ck">Trusted by the Monad Community</h3>
+            <p class="text-gray-300 max-w-2xl mx-auto" id="el-2khy38sj">Join thousands of Monad users who rely on NadChat for wallet security and monitoring.</p>
+          </div>
+          
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8" id="el-epifmqve">
+            <div class="text-center" id="el-dj9nh2uy">
+              <div class="text-4xl md:text-5xl font-bold text-[#9370DB] mb-2" id="el-9s4arhbm">5,000+</div>
+              <p class="text-gray-300" id="el-negbc9f6">Active Users</p>
+            </div>
+            
+            <div class="text-center" id="el-khf8svj3">
+              <div class="text-4xl md:text-5xl font-bold text-[#9370DB] mb-2" id="el-f7qr4g4e">$12M+</div>
+              <p class="text-gray-300" id="el-le8o5uih">Protected Assets</p>
+            </div>
+            
+            <div class="text-center" id="el-zquetpta">
+              <div class="text-4xl md:text-5xl font-bold text-[#9370DB] mb-2" id="el-e5dfkf0h">250+</div>
+              <p class="text-gray-300" id="el-rpnsdtjb">Scams Prevented</p>
+            </div>
+            
+            <div class="text-center" id="el-x6w82m83">
+              <div class="text-4xl md:text-5xl font-bold text-[#9370DB] mb-2" id="el-2fv2vjp8">99.9%</div>
+              <p class="text-gray-300" id="el-zba29q9x">Uptime</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- CTA Section -->
+      
+    </div>
+  </section>
+  
+  <style>
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-80px * 5 - 1.5rem * 5));
+      }
+    }
+    
+    .animate-scroll {
+      animation: scroll var(--animation-duration, 40s) linear infinite;
+    }
+    
+    .animate-scroll:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</div>
+
+              
+              
+              
+</element><element id="f5c38a60-3310-4f60-9ffd-c8b549e5f1d7" data-section-id="f5c38a60-3310-4f60-9ffd-c8b549e5f1d7">
+
+
+                
+                
+<div id="root">
+  <section id="security" class="bg-neutral-900 py-24 relative overflow-hidden">
+    <!-- Background elements -->
+    <div class="absolute inset-0 opacity-5" id="el-y2nw51y7">
+      <div class="absolute top-1/3 left-1/4 w-1/3 h-1/3 bg-[#8A2BE2] rounded-full blur-3xl" id="el-hthttjfo"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-1/3 h-1/3 bg-[#9370DB] rounded-full blur-3xl" id="el-uwnko0t1"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10" id="el-26t9c3yl">
+      <!-- Section header -->
+      <div class="text-center mb-16" id="el-bjz9jy9s">
+        <h2 class="text-4xl font-bold text-white mb-4" id="el-0pc1wgvy">Security</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto" id="el-1x7mu8kv">Your crypto deserves the highest level of protection. Here's how NadChat keeps your Monad assets safe.</p>
+      </div>
+      
+      <!-- Main Security Content -->
+      <div class="max-w-6xl mx-auto" id="el-qco8ud44">
+        <!-- Top Security Features Grid -->
+        <div class="grid md:grid-cols-3 gap-6 mb-16" id="el-jt6tqgid">
+          <!-- Security Feature 1 -->
+          <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 hover:border-[#9370DB] transition-all duration-300 group" id="el-yecp35o5">
+            <div class="h-14 w-14 bg-[#9370DB] bg-opacity-10 rounded-lg flex items-center justify-center mb-5 text-[#9370DB] group-hover:bg-opacity-20 transition-all duration-300" id="el-83ue8y61">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-nkm2bp0r">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" id="el-nywo6dyw"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3" id="el-162cw4z0">Real-time Monitoring</h3>
+            <p class="text-gray-300 mb-4" id="el-ydyp18qo">Continuous surveillance of your wallet activity with instant detection of suspicious transactions or approvals.</p>
+            <ul class="space-y-2 text-gray-400 text-sm" id="el-xyhhcp1v">
+              <li class="flex items-start" id="el-ccxi8co9">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#9370DB] mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-xo1squbc">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-hkcwhml8"></path>
+                </svg>
+                <span id="el-jd8p755w">24/7 wallet activity scanning</span>
+              </li>
+              <li class="flex items-start" id="el-uj67xcz6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#9370DB] mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-9klw510p">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-d4burmgz"></path>
+                </svg>
+                <span id="el-7t3fpzha">Sub-second alert generation</span>
+              </li>
+              <li class="flex items-start" id="el-2tlz0xhw">
+                
+                
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Security Feature 2 -->
+          <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 hover:border-[#9370DB] transition-all duration-300 group" id="el-cbdexd3u">
+            <div class="h-14 w-14 bg-[#9370DB] bg-opacity-10 rounded-lg flex items-center justify-center mb-5 text-[#9370DB] group-hover:bg-opacity-20 transition-all duration-300" id="el-uo3uecaq">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-kf3iqhj5">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" id="el-71fozm7k"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3" id="el-k89nxc11">Smart Contract Analysis</h3>
+            <p class="text-gray-300 mb-4" id="el-9a6maajk">Advanced scanning of every contract your wallet interacts with to detect potential malicious code or vulnerabilities.</p>
+            <ul class="space-y-2 text-gray-400 text-sm" id="el-b7wfhtgf">
+              <li class="flex items-start" id="el-5uag7rfw">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#9370DB] mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-am4xm67x">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-4yi0yybv"></path>
+                </svg>
+                <span id="el-rpyk2xrs">Code vulnerability assessment</span>
+              </li>
+              <li class="flex items-start" id="el-94j2juk9">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#9370DB] mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-qoxi2a4f">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-91zenavc"></path>
+                </svg>
+                <span id="el-x3g9lhlh">Permission verification</span>
+              </li>
+              <li class="flex items-start" id="el-pwlwfnqh">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#9370DB] mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-fejxuttg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-8ei2rfv3"></path>
+                </svg>
+                <span id="el-9xq7iinv">Risk classification system</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Security Feature 3 -->
+          <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 hover:border-[#9370DB] transition-all duration-300 group" id="el-r05tzgad">
+            <div class="h-14 w-14 bg-[#9370DB] bg-opacity-10 rounded-lg flex items-center justify-center mb-5 text-[#9370DB] group-hover:bg-opacity-20 transition-all duration-300" id="el-prm2cuk2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-nyijxpc1">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" id="el-92chawld"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3" id="el-ql2afnxo">Token Approval Management</h3>
+            <p class="text-gray-300 mb-4" id="el-zzdv3psf">Monitor and control the permissions you've granted to dApps.</p>
+            <ul class="space-y-2 text-gray-400 text-sm" id="el-frej8a0x">
+              <li class="flex items-start" id="el-qiqh0524">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#9370DB] mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-0bv1wgab">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-aixc2sj6"></path>
+                </svg>
+                <span id="el-sfbmq0dc">Approval cataloging &amp; tracking</span>
+              </li>
+              <li class="flex items-start" id="el-fylihslg">
+                
+                
+              </li>
+              <li class="flex items-start" id="el-4e3b0l82">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#9370DB] mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-8vh7uqwv">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-4gc17qdn"></path>
+                </svg>
+                <span id="el-7tg00hf8">Security recommendations</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Security Detail Section -->
+        <div class="mt-24" id="el-triso5gk">
+          <div class="flex flex-col lg:flex-row gap-12 items-center" id="el-tee1bitx">
+            <!-- Left content with image -->
+            <div class="lg:w-1/2" id="el-6mmj8pl8">
+              <div class="relative" id="el-j03onzpn">
+                <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8c2VjdXJpdHklMjBwcm9mZXNzaW9uYWx8ZW58MHwwfHx8MTc0MzE3NTI1M3ww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080?q=80" alt="man in blue denim jacket facing turned on monitor" onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height" width="6720" height="4480" class="rounded-xl w-full h-auto shadow-lg" id="el-l6xm1tu9">
+                <div class="absolute bottom-4 left-4 text-xs text-white bg-black bg-opacity-50 px-2 py-1 rounded" id="el-jze2h89e">
+                  Photo by Austin Distel
+                </div>
+                
+                <!-- Floating security badges -->
+                <div class="absolute -top-6 -right-6 h-20 w-20 bg-[#8A2BE2] bg-opacity-10 backdrop-blur-md rounded-xl flex items-center justify-center p-4 shadow-lg" id="el-n9woca81">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#9370DB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-tmdhqtkz">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" id="el-bx4hahpf"></path>
+                  </svg>
+                </div>
+                
+                <div class="absolute -bottom-6 -left-6 h-20 w-20 bg-[#9370DB] bg-opacity-10 backdrop-blur-md rounded-xl flex items-center justify-center p-4 shadow-lg" id="el-z2v5nymv">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#9370DB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-rl363vbw">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" id="el-h8giebyo"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right content -->
+            <div class="lg:w-1/2" id="el-ucvwl2b1">
+              <h3 class="text-3xl font-bold text-white mb-6" id="el-pbmck89b">Why Web3 Security Matters</h3>
+              <p class="text-gray-300 mb-8" id="el-w11qjkez">In traditional banking, security measures are built in. In Web3, you're responsible for your own safety. NadChat is your dedicated watchdog that keeps you protected on the Monad blockchain.</p>
+              
+              <div class="space-y-6" id="el-nyj9sglh">
+                <!-- Risk item 1 -->
+                <div class="bg-neutral-800 rounded-lg p-4 border border-neutral-700" id="el-andseixk">
+                  <div class="flex items-start" id="el-yx15nqt1">
+                    <div class="h-10 w-10 rounded-full bg-red-500 bg-opacity-10 flex items-center justify-center text-red-500 mr-4 shrink-0" id="el-6p1j9eck">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-20cix890">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" id="el-3t3qurtc"></path>
+                      </svg>
+                    </div>
+                    <div id="el-zfekhcbt">
+                      <h4 class="font-medium text-white mb-1" id="el-nkpmn442">Phishing Attacks</h4>
+                      <p class="text-gray-400 text-sm" id="el-n9klhx0a">NadChat alerts you when you're interacting with known phishing sites or suspicious wallet-draining contracts.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Risk item 2 -->
+                <div class="bg-neutral-800 rounded-lg p-4 border border-neutral-700" id="el-1d8x71vd">
+                  <div class="flex items-start" id="el-p1qzqjn7">
+                    <div class="h-10 w-10 rounded-full bg-red-500 bg-opacity-10 flex items-center justify-center text-red-500 mr-4 shrink-0" id="el-qubc3duw">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-ofc8hcs7">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" id="el-qoqj2mf4"></path>
+                      </svg>
+                    </div>
+                    <div id="el-40w68mgd">
+                      <h4 class="font-medium text-white mb-1" id="el-7zotoack">Unlimited Token Approvals</h4>
+                      <p class="text-gray-400 text-sm" id="el-t16oyldg">Many dApps request full access to your tokens. NadChat monitors these permissions and helps you revoke unnecessary ones.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Risk item 3 -->
+                <div class="bg-neutral-800 rounded-lg p-4 border border-neutral-700" id="el-o3mdwfct">
+                  <div class="flex items-start" id="el-qv19poey">
+                    <div class="h-10 w-10 rounded-full bg-red-500 bg-opacity-10 flex items-center justify-center text-red-500 mr-4 shrink-0" id="el-51oxtu7b">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-w7sjzxdi">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" id="el-uvs8jsho"></path>
+                      </svg>
+                    </div>
+                    <div id="el-octil5z1">
+                      <h4 class="font-medium text-white mb-1" id="el-td4gk39o">Rug Pulls &amp; Scams</h4>
+                      <p class="text-gray-400 text-sm" id="el-phs73u6a">We identify newly deployed contracts with suspicious patterns and warn you before you interact with potential scams.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+            </div>
+          </div>
+        </div>
+        
+        <!-- Security Stats & Info -->
+        <div class="mt-24 grid md:grid-cols-2 gap-8" id="el-8swdui4c">
+          <!-- Left section - Stats -->
+          
+          
+          <!-- Right section - Security Timeline -->
+          
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="mt-16 text-center" id="el-x9ewuhec">
+          <h3 class="text-2xl font-bold text-white mb-4" id="el-uqu8ksd2">Ready to secure your Monad wallet?</h3>
+          <p class="text-gray-300 max-w-2xl mx-auto mb-8" id="el-9lebkerh">Start protecting your assets today with NadChat's advanced security features.</p>
+          
+          <a href="#how-it-works" target="_self" class="inline-flex items-center justify-center bg-[#8A2BE2] hover:bg-[#9370DB] text-white py-3 px-8 rounded-lg transition-all duration-300 text-lg font-medium" id="el-uuj8f2hc">
+            <span id="el-aih9raul">Start Tracking My Wallet</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor" id="el-lio65z21">
+              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" id="el-rdsq6klv"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+              
+              
+              
+</element>
+
+<element id="6629df51-34e3-4094-9f35-d2458ba350ac" data-section-id="6629df51-34e3-4094-9f35-d2458ba350ac">
+
+
+                
+                
+<div id="root">
+  <footer id="footer" class="bg-neutral-900 pt-16 pb-8 relative overflow-hidden">
+    <!-- Background elements -->
+    <div class="absolute inset-0 opacity-5" id="el-f0na6b95">
+      <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#8A2BE2] rounded-full blur-3xl transform translate-y-1/2 -translate-x-1/4" id="el-i70mrh11"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10" id="el-e0qfw2t7">
+      <div class="max-w-6xl mx-auto" id="el-kqk65npp">
+        <!-- Footer Main Content -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12" id="el-3064alog">
+          <!-- Brand Column -->
+          <div class="md:col-span-6" id="el-qsp6z1hz">
+            <div class="mb-6" id="el-ilag5oqu">
+              <div class="flex items-center" id="el-3p8hz84f">
+                <a href="#" class="text-xl font-bold text-[#9370DB]" id="el-rhwlorl6">NadChat</a>
+              </div>
+            </div>
+            <p class="text-gray-400 mb-6" id="el-a2qpvfje">Your personal watchdog for Web3 wallet security on the Monad blockchain. Stay safe with real-time monitoring and alerts.</p>
+          </div>
+          <div class="md:col-span-6" id="el-qsp6z1hz">
+            
+            <div class="flex justify-end space-x-4 mb-12" id="el-r4hu9lh9">
+              <a href="https://twitter.com/nad_chat" target="_blank" rel="noopener noreferrer" class="h-10 w-10 rounded-full bg-neutral-800 hover:bg-[#9370DB] text-gray-400 hover:text-white flex items-center justify-center transition-colors duration-300" aria-label="Twitter" id="el-wxfe9bd8">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" id="el-z1gxw58u">
+                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" id="el-gmm8p1p4"></path>
+                </svg>
+              </a>
+              <a href="https://t.me/nadchat" target="_blank" rel="noopener noreferrer" class="h-10 w-10 rounded-full bg-neutral-800 hover:bg-[#9370DB] text-gray-400 hover:text-white flex items-center justify-center transition-colors duration-300" aria-label="Telegram" id="el-50pnhjvi">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" id="el-jm1ft9i1">
+                  <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" id="el-iaz7oi2t"></path>
+                </svg>
+              </a>
+              <a href="https://twitter.com/nad_chat" target="_blank" rel="noopener noreferrer" class="h-10 w-10 rounded-full bg-neutral-800 hover:bg-[#9370DB] text-gray-400 hover:text-white flex items-center justify-center transition-colors duration-300" aria-label="Discord" id="el-8srqh4t5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" id="el-5zqznm8r">
+                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.516.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.873-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.291.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" id="el-zqx36zrw"></path>
+                </svg>
+              </a>
+              <a href="https://twitter.com/nad_chat" target="_blank" rel="noopener noreferrer" class="h-10 w-10 rounded-full bg-neutral-800 hover:bg-[#9370DB] text-gray-400 hover:text-white flex items-center justify-center transition-colors duration-300" aria-label="GitHub" id="el-153b8k61">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" id="el-8vubh9dm">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" id="el-izif1nlj"></path>
+                </svg>
+              </a>
+            </div>
+            
+            <div class="mb-6" id="el-3xmeca55">
+              
+            </div>
+          </div>
+          
+          <!-- Navigation Columns -->
+          <div class="md:col-span-2 hidden" id="el-c16puyxr">
+            <h3 class="text-white font-bold mb-4" id="el-ni8qr6uo">Product</h3>
+            <ul class="space-y-2" id="el-khncpwe3">
+              <li id="el-36dl7p4y"><a href="https://twitter.com/nad_chat" class="text-gray-400 hover:text-[#9370DB] transition-colors duration-300" id="el-guqthg2i" target="_blank" rel="noopener noreferrer">Features</a></li>
+              <li id="el-zw5owor2"><a href="https://twitter.com/nad_chat" class="text-gray-400 hover:text-[#9370DB] transition-colors duration-300" id="el-4ir6fo9v" target="_blank" rel="noopener noreferrer">How It Works</a></li>
+              <li id="el-4ht32io6"><a href="https://twitter.com/nad_chat" class="text-gray-400 hover:text-[#9370DB] transition-colors duration-300" id="el-4hnxqh2o" target="_blank" rel="noopener noreferrer">Demo</a></li>
+              <li id="el-u0wx64o6"><a href="https://twitter.com/nad_chat" class="text-gray-400 hover:text-[#9370DB] transition-colors duration-300" id="el-05lcc13m" target="_blank" rel="noopener noreferrer">Security</a></li>
+              <li id="el-cvyg39pa"><a href="https://twitter.com/nad_chat" class="text-gray-400 hover:text-[#9370DB] transition-colors duration-300" id="el-pm8815ut" target="_blank" rel="noopener noreferrer">Testimonials</a></li>
+            </ul>
+          </div>
+          
+          <div class="md:col-span-2 hidden" id="el-ivxnd3s9">
+            <h3 class="text-white font-bold mb-4" id="el-lx8s6zui">Resources</h3>
+            <ul class="space-y-2" id="el-6gmy39a4">
+              <li id="el-0c7160t3"><a href="https://twitter.com/nad_chat" class="text-gray-400 hover:text-[#9370DB] transition-colors duration-300" id="el-tnt2fxg7" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+              <li id="el-h55unmnw"><a href="https://twitter.com/nad_chat" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#9370DB] transition-colors duration-300" id="el-5uajajeq">Documentation</a></li>
+              <li id="el-shgxohnf"><a href="https://twitter.com/nad_chat" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#9370DB] transition-colors duration-300" id="el-oxh1iyhx">Blog</a></li>
+              <li id="el-sf4l2mxn"><a href="https://twitter.com/nad_chat" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#9370DB] transition-colors duration-300" id="el-hcyp4l9h">GitHub</a></li>
+              <li id="el-51pmxf26"><a href="https://twitter.com/nad_chat" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#9370DB] transition-colors duration-300" id="el-nwooa019">Status</a></li>
+            </ul>
+          </div>
+          
+          <div class="md:col-span-2 hidden" id="el-9evpider">
+            <h3 class="text-white font-bold mb-4" id="el-znroxsir">Company</h3>
+            <ul class="space-y-2" id="el-29pwl71e">
+              <li id="el-p36i2v72"><a href="https://twitter.com/nad_chat" class="text-gray-400 hover:text-[#9370DB] transition-colors duration-300" id="el-aaj1zwc1" target="_blank" rel="noopener noreferrer">About Us</a></li>
+              <li id="el-okermuh5"><a href="https://twitter.com/nad_chat" class="text-gray-400 hover:text-[#9370DB] transition-colors duration-300" id="el-p8gpslnx" target="_blank" rel="noopener noreferrer">Careers</a></li>
+              <li id="el-p5n34zfn"><a href="https://twitter.com/nad_chat" class="text-gray-400 hover:text-[#9370DB] transition-colors duration-300" id="el-d2ydoi2o" target="_blank" rel="noopener noreferrer">Partners</a></li>
+              <li id="el-k4puteks"><a href="https://twitter.com/nad_chat" class="text-gray-400 hover:text-[#9370DB] transition-colors duration-300" id="el-05gmy657" target="_blank" rel="noopener noreferrer">Press</a></li>
+              <li id="el-853j68tt"><a href="https://twitter.com/nad_chat" class="text-gray-400 hover:text-[#9370DB] transition-colors duration-300" id="el-t5kzsri2" target="_blank" rel="noopener noreferrer">Contact</a></li>
+            </ul>
+          </div>
+          
+          <!-- Newsletter Column -->
+          
+        </div>
+        
+        <!-- Subtle visual line -->
+        <div class="h-px bg-neutral-800 mb-10 max-w-6xl mx-auto" id="el-3b0pkfcg"></div>
+        
+        <!-- Bottom area with legal links -->
+        <div class="text-gray-500 text-sm mb-4 md:mb-0 text-center" id="el-ktngqco8">
+          © 2025 NadChat. All rights reserved. 
+        </div>
+        
+
+        <div class="flex flex-col md:flex-row justify-between items-center" id="el-88wxk5qh">
+          <div class="flex flex-wrap justify-center gap-5 hidden" id="el-7yfmem3y">
+            <a href="https://twitter.com/nad_chat" class="text-gray-500 hover:text-[#9370DB] text-sm transition-colors duration-300" id="el-vti1vg3g" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            <a href="https://twitter.com/nad_chat" class="text-gray-500 hover:text-[#9370DB] text-sm transition-colors duration-300" id="el-5bslcm7x" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+            <a href="https://twitter.com/nad_chat" class="text-gray-500 hover:text-[#9370DB] text-sm transition-colors duration-300" id="el-f0tpvioo" target="_blank" rel="noopener noreferrer">Cookie Policy</a>
+            <a href="https://twitter.com/nad_chat" class="text-gray-500 hover:text-[#9370DB] text-sm transition-colors duration-300" id="el-mab44cse" target="_blank" rel="noopener noreferrer">Security Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {      
+      // Smooth scroll for navigation links
+      const navLinks = document.querySelectorAll('a[href^="#"]');
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+          const targetId = this.getAttribute('href');
+          
+          // Only process if the href is a valid section ID
+          if (targetId !== '#' && document.querySelector(targetId)) {
+            event.preventDefault();
+            
+            const targetElement = document.querySelector(targetId);
+            const headerOffset = 80; // Adjust based on your header height
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</div>      
+              
+        </element>
+      </div>
+    </main>
+  </body>
+</html>
